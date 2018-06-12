@@ -1,0 +1,23 @@
+image: python:3.6
+
+pipelines:
+  custom:
+    pull-request:
+      - step:
+          caches:
+            - pip
+          script:
+            - pip install -r requirements.txt
+
+    sent-to-stage:
+      - step:
+          script:
+            - git push -f https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git $BITBUCKET_BRANCH:master
+            - git push -f https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME_REPORTS.git $BITBUCKET_BRANCH:master
+
+  branches:
+    master:
+      - step:
+          script:
+            - git push -f https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git HEAD
+            - git push -f https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME_REPORTS.git HEAD
