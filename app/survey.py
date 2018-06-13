@@ -5,7 +5,7 @@ from .dao import DataAccessObject
 
 
 bp_survey = Blueprint('survey', __name__)
-api = Api(bp_survey, doc='/swagger/')
+api = Api(bp_survey)
 dao = DataAccessObject()
 
 

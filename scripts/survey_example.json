@@ -2,7 +2,7 @@
   "questions": [
     {
       "question_id": "A",
-      "text": "example1",
+      "text": "exampleA",
       "type": "radio-string",
       "answers": [
         {
@@ -29,13 +29,13 @@
           "answer_id": "A5",
           "text": "Concordo Plenamente",
           "score": 2
-        },
+        }
       ],
       "answered": null
     },
     {
       "id": "B",
-      "text": "Estou apropriadamente envolvido em decisões que afetam meu trabalho.",
+      "text": "ExampleB",
       "type": "slide-number",
       "answers": [
         {
