@@ -1,0 +1,2291 @@
+[
+  {
+    "label": {
+      "es-ar": "Alineaci\u00f3n",
+      "pt-br": "Alinhamento"
+    },
+    "metric_id": "alignment",
+    "submetrics": [
+      {
+        "label": {
+          "es-ar": "Valores",
+          "pt-br": "Valores"
+        },
+        "questions": [
+          {
+            "answers": [
+              {
+                "answer_id": "valuesAnswer1a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer1b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer1c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer1d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer1e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfPor qu\u00e9 las acciones de la empresa no reflejan los valores de la empresa?",
+              "pt-br": "Por que as a\u00e7\u00f5es da empresa n\u00e3o refletem os valores da empresa?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 est\u00e1 haciendo la empresa para que sus decisiones reflejen los valores de la empresa?",
+              "pt-br": "O que a empresa est\u00e1 fazendo para suas decis\u00f5es refletirem os valores da empresa?"
+            },
+            "question_id": "values1",
+            "text": {
+              "es-ar": "La forma en que mi empresa toma decisiones refleja los valores de la empresa.",
+              "pt-br": "A maneira como minha empresa toma decis\u00f5es reflete os valores da empresa"
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "valuesAnswer2a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer2b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer2c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer2d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer2e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 podr\u00eda hacer la empresa para aumentar la frecuencia?",
+              "pt-br": "O que a empresa poderia fazer para aumentar essa frequ\u00eancia?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace que los comportamientos reflejen los valores de la organizaci\u00f3n?",
+              "pt-br": "O que faz com que os comportamentos reflitam os valores da organiza\u00e7\u00e3o?"
+            },
+            "question_id": "values2",
+            "text": {
+              "es-ar": "En una escala de 0 a 10, \u00bfcon qu\u00e9 frecuencia percibe comportamientos que reflejan los valores de su organizaci\u00f3n?",
+              "pt-br": "Em uma escala de 0 a 10, com que frequ\u00eancia voc\u00ea percebe comportamentos que refletem os valores da sua organiza\u00e7\u00e3o?"
+            },
+            "type": "slide-number"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "valuesAnswer3a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer3b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer3c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer3d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer3e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfPor qu\u00e9 los valores de la organizaci\u00f3n no te motivan?",
+              "pt-br": "Por que os valores da organiza\u00e7\u00e3o n\u00e3o motivam voc\u00ea?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hacen los valores de la organizaci\u00f3n motivantes para usted?",
+              "pt-br": "O que tornam os valores da organiza\u00e7\u00e3o motivantes para voc\u00ea?"
+            },
+            "question_id": "values3",
+            "text": {
+              "es-ar": "\u00bfEst\u00e1 motivado por los valores de su organizaci\u00f3n?",
+              "pt-br": "Voc\u00ea est\u00e1 motivado pelos valores da sua organiza\u00e7\u00e3o?"
+            },
+            "type": "slide-number"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "valuesAnswer4a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer4b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer4c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer4d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer4e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfPor qu\u00e9 los valores de la empresa no son importantes para usted?",
+              "pt-br": "Por que os valores da empresa n\u00e3o s\u00e3o importantes para voc\u00ea?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hacen los valores de la empresa alineados con los valores que usted considera importante en la vida?",
+              "pt-br": "O que tornam os valores da  empresa alinhadados com os valores que voc\u00ea considera importante na vida?"
+            },
+            "question_id": "values4",
+            "text": {
+              "es-ar": "Los valores de mi empresa est\u00e1n alineados con valores que considero importantes en la vida",
+              "pt-br": "Os valores da minha empresa est\u00e3o alinhados com valores que considero importantes na vida"
+            },
+            "type": "slide-number"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "valuesAnswer5a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer5b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer5c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer5d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "valuesAnswer5e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 est\u00e1 faltando para que los l\u00edderes de su empresa demuestren que la gente es la clave para el \u00e9xito?",
+              "pt-br": "O que est\u00e1 faltando para os l\u00edderes de sua empresa demonstrarem que as pessoas s\u00e3o a chave para o sucesso? "
+            },
+            "feedback_positive": {
+              "es-ar": "Lo que los l\u00edderes de su empresa hacen para demostrar c\u00f3mo las personas son esenciales para el \u00e9xito?",
+              "pt-br": "O que os l\u00edderes de sua  empresa fazem para demonstrar como as pessoas s\u00e3o essenciais para o sucesso?"
+            },
+            "question_id": "values5",
+            "text": {
+              "es-ar": "\u00bfLos l\u00edderes de su empresa demuestran que la gente es esencial para su \u00e9xito?",
+              "pt-br": "Os l\u00edderes de sua empresa demonstram que as pessoas s\u00e3o essenciais para seu sucesso?"
+            },
+            "type": "radio-string"
+          }
+        ],
+        "submetric_id": "values",
+        "text": {
+          "es-ar": "\u00bfLos valores de la empresa reflejan en las acciones de las personas y est\u00e1n alineados con lo que la gente considera importante en la vida?",
+          "pt-br": "Os valores da empresa refletem nas a\u00e7\u00f5es das pessoas e est\u00e3o alinhados com o que as pessoas consideram importante na vida?"
+        }
+      },
+      {
+        "label": {
+          "es-ar": "Visi\u00f3n y Misi\u00f3n",
+          "pt-br": "Vis\u00e3o e Miss\u00e3o"
+        },
+        "questions": [
+          {
+            "answers": [
+              {
+                "answer_id": "visionAnswer1a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "visionAnswer1b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer1c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "visionAnswer1d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer1e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfPor qu\u00e9 no crees que la empresa es capaz de alcanzar sus objetivos?",
+              "pt-br": "Por que voc\u00ea n\u00e3o acredita que a empresa \u00e9 capaz de alcan\u00e7ar seus objetivos?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 te hace creer que la empresa es capaz de alcanzar sus objetivos?",
+              "pt-br": "O que te faz acreditar que a empresa \u00e9 capaz de alcan\u00e7ar seus objetivos?"
+            },
+            "question_id": "vision1",
+            "text": {
+              "es-ar": "\u00bfUsted cree que su empresa es capaz de alcanzar sus objetivos?",
+              "pt-br": "Voc\u00ea acredita que sua empresa \u00e9 capaz de alcan\u00e7ar seus objetivos?"
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "visionAnswer2a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "visionAnswer2b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer2c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "visionAnswer2d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer2e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfPor qu\u00e9 crees que no estamos en la direcci\u00f3n correcta?",
+              "pt-br": "Por que voc\u00ea acha que n\u00e3o estamos indo na dire\u00e7\u00e3o correta?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 podr\u00edamos hacer para que la empresa vaya a la direcci\u00f3n correcta?",
+              "pt-br": "O que poder\u00edamos fazer para a empresa ir para a dire\u00e7\u00e3o correta?"
+            },
+            "question_id": "vision2",
+            "text": {
+              "es-ar": "Los objetivos y estrategias de mi organizaci\u00f3n nos est\u00e1n llevando en la direcci\u00f3n correcta.",
+              "pt-br": "Os objetivos e estrat\u00e9gias da minha organiza\u00e7\u00e3o est\u00e3o nos levando na dire\u00e7\u00e3o certa."
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "visionAnswer3a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "visionAnswer3b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer3c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "visionAnswer3d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer3e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 est\u00e1 faltando para que la organizaci\u00f3n pueda invertir suficiente para satisfacer sus ambiciones?",
+              "pt-br": "O que est\u00e1 faltando para a organiza\u00e7\u00e3o investir suficiente para atender \u00e0s suas ambi\u00e7\u00f5es?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfDe qu\u00e9 forma los esfuerzos de la empresa est\u00e1n siendo suficientes para atender a sus ambiciones?",
+              "pt-br": "De que forma os esfor\u00e7os da empresa est\u00e3o sendo suficientes para atender \u00e0s suas ambi\u00e7\u00f5es?"
+            },
+            "question_id": "vision3",
+            "text": {
+              "es-ar": "\u00bfSu organizaci\u00f3n invierte una cantidad de recursos, personas y esfuerzos que atienden a sus ambiciones?",
+              "pt-br": "Sua organiza\u00e7\u00e3o investe uma quantidade de recursos, pessoas e esfor\u00e7os que atendem \u00e0s suas ambi\u00e7\u00f5es?"
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "visionAnswer4a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "visionAnswer4b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer4c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "visionAnswer4d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer4e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 podr\u00eda hacer la empresa para comunicarse mejor con los empleados?",
+              "pt-br": "O que a empresa poderia fazer para se comunicar melhor com os funcion\u00e1rios?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace que la comunicaci\u00f3n de la empresa sea clara y eficaz?",
+              "pt-br": "O que torna a comunica\u00e7\u00e3o da empresa clara e eficaz? "
+            },
+            "question_id": "vision4",
+            "text": {
+              "es-ar": "Mi organizaci\u00f3n se comunica de forma clara y eficaz con los empleados.",
+              "pt-br": "Minha organiza\u00e7\u00e3o se comunica de forma clara e eficaz com os funcion\u00e1rios."
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "visionAnswer5a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "visionAnswer5b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer5c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "visionAnswer5d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer5e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 podr\u00edamos hacer para que la visi\u00f3n a largo plazo est\u00e9 clara para usted y todos los empleados?",
+              "pt-br": "O que poderiamos fazer para a vis\u00e3o de longo prazo ficar clara para voc\u00ea e todos os funcion\u00e1rios?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 estamos haciendo para que la visi\u00f3n a largo plazo est\u00e9 clara para todos los empleados?",
+              "pt-br": "O que estamos fazendo para que a vis\u00e3o de longo prazo esteja clara para todos os funcion\u00e1rios?"
+            },
+            "question_id": "vision5",
+            "text": {
+              "es-ar": "\u00bfLa visi\u00f3n a largo plazo de su organizaci\u00f3n est\u00e1 clara para usted?",
+              "pt-br": "A vis\u00e3o de longo prazo de sua organiza\u00e7\u00e3o est\u00e1 clara para voc\u00ea?"
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "visionAnswer6a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "visionAnswer6b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer6c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "visionAnswer6d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer6e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfPor qu\u00e9 el prop\u00f3sito y la misi\u00f3n de la empresa no te motivan?",
+              "pt-br": "Por que o prop\u00f3sito e miss\u00e3o da empresa n\u00e3o te motivam?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hacen el prop\u00f3sito y la misi\u00f3n de la empresa motivantes para usted?",
+              "pt-br": "O que tornam o prop\u00f3sito e miss\u00e3o da empresa motivantes para voc\u00ea?"
+            },
+            "question_id": "vision6",
+            "text": {
+              "es-ar": "Soy inspirado por el prop\u00f3sito y misi\u00f3n de mi empresa",
+              "pt-br": "Sou inspirado pelo prop\u00f3sito e miss\u00e3o da minha empresa"
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "visionAnswer7a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "visionAnswer7b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer7c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "visionAnswer7d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "visionAnswer7e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 est\u00e1 faltando para que los l\u00edderes de la empresa comuniquen una visi\u00f3n que le motiva?",
+              "pt-br": "O que est\u00e1 faltando para os l\u00edderem da empresa comunicarem uma vis\u00e3o que lhe motiva?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace la visi\u00f3n comunicada por los l\u00edderes de motivarse?",
+              "pt-br": "O que faz a vis\u00e3o comunicada pelos l\u00edderes te motivar?"
+            },
+            "question_id": "vision7",
+            "text": {
+              "es-ar": "Los l\u00edderes de mi empresa comunicaron una visi\u00f3n que me motiva",
+              "pt-br": "Os l\u00edderes da minha empresa comunicaram uma vis\u00e3o que me motiva"
+            },
+            "type": "radio-string"
+          }
+        ],
+        "submetric_id": "vision",
+        "text": {
+          "es-ar": "\u00bfLa misi\u00f3n y la visi\u00f3n de la empresa motivan a los empleados?",
+          "pt-br": "A miss\u00e3o e a vis\u00e3o da empresa motivam os funcion\u00e1rios?"
+        }
+      },
+      {
+        "label": {
+          "es-ar": "\u00c9tica y Responsabilidad Social",
+          "pt-br": "\u00c9tica e Responsabilidade Social"
+        },
+        "questions": [
+          {
+            "answers": [
+              {
+                "answer_id": "ethicsAnswer1a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer1b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer1c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer1d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer1e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfPor qu\u00e9 crees que todas las personas no son tratadas de forma justa?",
+              "pt-br": "Por que voc\u00ea acha que todas as pessoas n\u00e3o s\u00e3o tratadas de forma justa?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace la empresa para usted creer que todas las personas son tratadas de forma justa?",
+              "pt-br": "O que a empresa faz para voc\u00ea acreditar que todas as pessoas s\u00e3o tratadas de forma justa?"
+            },
+            "question_id": "ethics1",
+            "text": {
+              "es-ar": "Las personas de todos los or\u00edgenes se tratan de forma justa en mi empresa.",
+              "pt-br": "Pessoas de todas as origens s\u00e3o tratadas de forma justa na minha empresa."
+            },
+            "type": "star-rating"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "ethicsAnswer2a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer2b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer2c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer2d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer2e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 podr\u00eda hacer la empresa para proteger a los funcionarios de discriminaci\u00f3n?",
+              "pt-br": " O que a empresa poderia fazer para proteger  os funcion\u00e1rios de discrimina\u00e7\u00e3o?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 crees que la empresa hace para proteger a los empleados?",
+              "pt-br": "O que voc\u00ea acha que a empresa faz para proteger os funcion\u00e1rios?"
+            },
+            "question_id": "ethics2",
+            "text": {
+              "es-ar": "Mi organizaci\u00f3n protege a los empleados de la discriminaci\u00f3n",
+              "pt-br": "Minha organiza\u00e7\u00e3o protege os funcion\u00e1rios da discrimina\u00e7\u00e3o."
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "ethicsAnswer3a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer3b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer3c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer3d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer3e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 est\u00e1 faltando para ser respetadas en la empresa?",
+              "pt-br": "O que est\u00e1 faltando para as serem respeitadas na empresa?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 crees que hace que las personas respetadas en la empresa?",
+              "pt-br": "O que voc\u00ea acha que torna as pessoas respeitadas na empresa?"
+            },
+            "question_id": "ethics3",
+            "text": {
+              "es-ar": "Las personas se respetan en mi organizaci\u00f3n",
+              "pt-br": "As pessoas s\u00e3o respeitadas por quem s\u00e3o na minha organiza\u00e7\u00e3o"
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "ethicsAnswer4a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer4b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer4c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer4d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer4e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 est\u00e1 faltando para que su empresa est\u00e9 involucrada en la comunidad?",
+              "pt-br": "O que est\u00e1 faltando para sua empresa ficar envolvida na comunidade?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace que su empresa est\u00e9 involucrada en la comunidad?",
+              "pt-br": "O que torna a sua empresa sempre envolvida na comunidade?"
+            },
+            "question_id": "ethics4",
+            "text": {
+              "es-ar": "\u00bfSu empresa est\u00e1 siempre involucrada en la comunidad?",
+              "pt-br": "A sua empresa est\u00e1 sempre envolvida na comunidade?"
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "ethicsAnswer5a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer5b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer5c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer5d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "ethicsAnswer5e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 est\u00e1 faltando para su ser ambientalmente consciente?",
+              "pt-br": "O que est\u00e1 faltando para sua ser ambientalmente consciente"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace que su empresa sea siempre ambientalmente consciente?",
+              "pt-br": "O que torna a sua empresa sempre ambientalmente consciente?"
+            },
+            "question_id": "ethics5",
+            "text": {
+              "es-ar": "En una escala de 0 a 10, cu\u00e1n ambientalmente consciente es su empresa en la forma en que se comporta?",
+              "pt-br": "Em uma escala de 0 a 10, qu\u00e3o ambientalmente consciente \u00e9 sua empresa na forma como ela se comporta?"
+            },
+            "type": "slide-number"
+          }
+        ],
+        "submetric_id": "ethics",
+        "text": {
+          "es-ar": "\u00bfLa empresa es ambientalmente consciente, involucrada en su comunidad y promueve pr\u00e1cticas \u00e9ticas?",
+          "pt-br": "A empresa \u00e9 ambientalmente consciente, envolvida em sua comunidade e promove pr\u00e1ticas \u00e9ticas?"
+        }
+      }
+    ],
+    "text": {
+      "es-ar": "La alineaci\u00f3n representa c\u00f3mo los empleados se alinean\ndentro de la visi\u00f3n, misi\u00f3n y valores de la empresa, as\u00ed como\nellos piensan sobre el compromiso de la organizaci\u00f3n con la \u00e9tica\n& Responsabilidad social.",
+      "pt-br": "O Alinhamento representa como os funcion\u00e1rios se alinham\ndentro da vis\u00e3o, miss\u00e3o e valores da empresa, bem como\neles pensam sobre o compromisso da organiza\u00e7\u00e3o com a \u00c9tica\n& Responsabilidade social."
+    }
+  },
+  {
+    "label": {
+      "es-ar": "Embajador",
+      "pt-br": "Embaixador"
+    },
+    "metric_id": "ambassadorship",
+    "submetrics": [
+      {
+        "label": {
+          "es-ar": "Promotor",
+          "pt-br": "Promotor"
+        },
+        "questions": [
+          {
+            "answers": [
+              {
+                "answer_id": "promotorAnswer1a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer1b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer1c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer1d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer1e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 te impide recomendar los productos / servicios de la empresa?",
+              "pt-br": "O que est\u00e1 impedindo voc\u00ea de recomendar os produtos / servi\u00e7os da empresa?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace usted querer recomendar los productos / servicios de la empresa?",
+              "pt-br": "O que faz voc\u00ea querer recomendar os produtos/ servi\u00e7os da empresa?"
+            },
+            "question_id": "promotor1",
+            "text": {
+              "es-ar": "Si usted estuviera a cargo de los premios de \"Mejores lugares para trabajar\",  usted nombrar\u00eda a la empresa?",
+              "pt-br": "Se voc\u00ea estivesse encarregado dos pr\u00eamios de \"Melhores lugares para trabalhar\", voc\u00ea nomearia a empresa?"
+            },
+            "type": "percent"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "promotorAnswer2a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer2b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer2c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer2d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer2e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 te impide recomendar los productos / servicios de la empresa?",
+              "pt-br": "O que est\u00e1 impedindo voc\u00ea de recomendar os produtos / servi\u00e7os da empresa?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace usted querer recomendar los productos / servicios de la empresa?",
+              "pt-br": "O que faz voc\u00ea querer recomendar os produtos/ servi\u00e7os da empresa?"
+            },
+            "question_id": "promotor2",
+            "text": {
+              "es-ar": "En una escala de 0 a 10,  cu\u00e1l es la probabilidad de que usted recomiende su organizaci\u00f3n como un buen lugar para trabajar",
+              "pt-br": "Em uma escala de 0 a 10, qual a probabilidade de voc\u00ea recomendar sua organiza\u00e7\u00e3o como um bom lugar para trabalhar"
+            },
+            "type": "slide-number"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "promotorAnswer3a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer3b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer3c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer3d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer3e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 te impide recomendar los productos / servicios de la empresa?",
+              "pt-br": "O que est\u00e1 impedindo voc\u00ea de recomendar os produtos / servi\u00e7os da empresa?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace usted querer recomendar los productos / servicios de la empresa?",
+              "pt-br": "O que faz voc\u00ea querer recomendar os produtos/ servi\u00e7os da empresa?"
+            },
+            "question_id": "promotor3",
+            "text": {
+              "es-ar": "En una escala de 0 a 10, cu\u00e1l es la probabilidad de que usted recomiende los productos / servicios que su organizaci\u00f3n produce?",
+              "pt-br": "Em uma escala de 0 a 10, qual a probabilidade de voc\u00ea recomendar os produtos / servi\u00e7os que sua organiza\u00e7\u00e3o produz?"
+            },
+            "type": "slide-number"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "promotorAnswer4a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer4b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer4c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer4d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer4e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 te impide recomendar los productos / servicios de la empresa?",
+              "pt-br": "O que est\u00e1 impedindo voc\u00ea de recomendar os produtos / servi\u00e7os da empresa?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace usted querer recomendar los productos / servicios de la empresa?",
+              "pt-br": "O que faz voc\u00ea querer recomendar os produtos/ servi\u00e7os da empresa?"
+            },
+            "question_id": "promotor4",
+            "text": {
+              "es-ar": "Me alegrar\u00eda ser un cliente de mi organizaci\u00f3n  o para comprar los productos / servicios que ofrece.",
+              "pt-br": "Eu ficaria feliz em ser um cliente da minha organiza\u00e7\u00e3o  ou para comprar os produtos / servi\u00e7os que oferece"
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "promotorAnswer5a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer5b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer5c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer5d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "promotorAnswer5e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 te impide recomendar los productos / servicios de la empresa?",
+              "pt-br": "O que est\u00e1 impedindo voc\u00ea de recomendar os produtos / servi\u00e7os da empresa?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace usted querer recomendar los productos / servicios de la empresa?",
+              "pt-br": "O que faz voc\u00ea querer recomendar os produtos/ servi\u00e7os da empresa?"
+            },
+            "question_id": "promotor5",
+            "text": {
+              "es-ar": "Me considero un promotor de la empresa",
+              "pt-br": "Eu me considero um promotor da empresa"
+            },
+            "type": "radio-string"
+          }
+        ],
+        "submetric_id": "promotor",
+        "text": {
+          "es-ar": "\u00bfLos empleados recomiendan a la empresa como un buen lugar para trabajar y estar dispuestos a recomendar sus productos / servicios a otras personas?",
+          "pt-br": "Os funcion\u00e1rios recomendariam a  empresa como um bom lugar para trabalhar e estariam dispostos a recomendar seus produtos/servi\u00e7os a outras  pessoas?"
+        }
+      },
+      {
+        "label": {
+          "es-ar": "Orgullo",
+          "pt-br": "Orgulho"
+        },
+        "questions": [
+          {
+            "answers": [
+              {
+                "answer_id": "prideAnswer1a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "prideAnswer1b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "prideAnswer1c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "prideAnswer1d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "prideAnswer1e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 podemos hacer para dejarte orgulloso de trabajar aqu\u00ed?",
+              "pt-br": "O que podemos fazer para te deixar orgulhoso de trabalhar aqui?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 te deja orgulloso de trabajar aqu\u00ed?",
+              "pt-br": "O que te deixa orgulhoso em trabalhar aqui?"
+            },
+            "question_id": "pride1",
+            "text": {
+              "es-ar": " Cuando usted dice en qu\u00e9 empresa trabaja, c\u00f3mo usted se siente?",
+              "pt-br": "Quando voc\u00ea diz em qual empresa voc\u00ea trabalha, como voc\u00ea se sente?"
+            },
+            "type": "percent"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "prideAnswer2a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "prideAnswer2b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "prideAnswer2c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "prideAnswer2d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "prideAnswer2e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 podemos hacer para dejarte orgulloso de trabajar aqu\u00ed?",
+              "pt-br": "O que podemos fazer para te deixar orgulhoso de trabalhar aqui?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 te deja orgulloso de trabajar aqu\u00ed?",
+              "pt-br": "O que te deixa orgulhoso em trabalhar aqui?"
+            },
+            "question_id": "pride2",
+            "text": {
+              "es-ar": "Estoy orgulloso de lo que mi empresa representa",
+              "pt-br": "Tenho orgulho do que minha empresa representa"
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "prideAnswer3a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "prideAnswer3b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "prideAnswer3c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "prideAnswer3d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "prideAnswer3e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 podemos hacer para dejarte orgulloso de trabajar aqu\u00ed?",
+              "pt-br": "O que podemos fazer para te deixar orgulhoso de trabalhar aqui?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 te deja orgulloso de trabajar aqu\u00ed?",
+              "pt-br": "O que te deixa orgulhoso em trabalhar aqui?"
+            },
+            "question_id": "pride3",
+            "text": {
+              "es-ar": "Estoy orgulloso de lo que mi empresa ofrece a la sociedad",
+              "pt-br": "Tenho orgulho do que minha empresa oferece \u00e0 sociedade"
+            },
+            "type": "radio-string"
+          }
+        ],
+        "submetric_id": "pride",
+        "text": {
+          "es-ar": "\u00bfLos empleados se enorgullecen de la empresa?",
+          "pt-br": "Os funcion\u00e1rios tem orgulho da empresa?"
+        }
+      }
+    ],
+    "text": {
+      "es-ar": "La m\u00e9trica embajador representa el nivel de orgullo que los empleados tienen de la empresa y si la recomendar\u00eda a otras personas",
+      "pt-br": "A m\u00e9trica Embaixadorismo representa o n\u00edvel de orgulho que os funcion\u00e1rios tem da empresa e se eles a recomendariam para outras pessoas"
+    }
+  },
+  {
+    "label": {
+      "es-ar": "feedback",
+      "pt-br": "feedback"
+    },
+    "metric_id": "feedback",
+    "submetrics": [
+      {
+        "label": {
+          "es-ar": "Sugerencias",
+          "pt-br": "Sugest\u00f5es"
+        },
+        "questions": [
+          {
+            "answers": [
+              {
+                "answer_id": "suggestionAnswer1a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer1b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer1c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer1d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer1e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 es lo que est\u00e1 faltando para que sus sugerencias sean consideradas por la empresa?",
+              "pt-br": "O que est\u00e1 faltando para as suas sugest\u00f5es serem consideradas pela empresa?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfPor qu\u00e9 crees que el feedback que recibe es considerado por la empresa?",
+              "pt-br": "Por que voc\u00ea acha que o feedback que recebe \u00e9 considerado pela empresa?"
+            },
+            "question_id": "suggestion1",
+            "text": {
+              "es-ar": "\u00bfC\u00f3mo eval\u00faa la importancia que su empresa le da a sus opiniones y sugerencias?",
+              "pt-br": "Como voc\u00ea avalia a import\u00e2ncia que  sua empresa d\u00e1 \u00e0s sua sopni\u00f5es e sugest\u00f5es?"
+            },
+            "type": "star-rating"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "suggestionAnswer2a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer2b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer2c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer2d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer2e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 es lo que est\u00e1 faltando para que sus sugerencias sean consideradas por la empresa?",
+              "pt-br": "O que est\u00e1 faltando para as suas sugest\u00f5es serem consideradas pela empresa?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfPor qu\u00e9 crees que el feedback que recibe es considerado por la empresa?",
+              "pt-br": "Por que voc\u00ea acha que o feedback que recebe \u00e9 considerado pela empresa?"
+            },
+            "question_id": "suggestion2",
+            "text": {
+              "es-ar": "Siento que puedo expresar mi opini\u00f3n sobre la compa\u00f1\u00eda",
+              "pt-br": "Sinto que posso expressar minha opni\u00e3o sobre a empresa"
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "suggestionAnswer3a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer3b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer3c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer3d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer3e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 es lo que est\u00e1 faltando para que sus sugerencias sean consideradas por la empresa?",
+              "pt-br": "O que est\u00e1 faltando para as suas sugest\u00f5es serem consideradas pela empresa?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfPor qu\u00e9 crees que el feedback que recibe es considerado por la empresa?",
+              "pt-br": "Por que voc\u00ea acha que o feedback que recebe \u00e9 considerado pela empresa?"
+            },
+            "question_id": "suggestion3",
+            "text": {
+              "es-ar": "\u00bfEn una escala de 0 a 10, si tiene nuevas ideas para su organizaci\u00f3n, cu\u00e1les son las posibilidades de compartirlas?",
+              "pt-br": "Em uma escala de 0 a 10, se voc\u00ea tiver novas ideias para sua organiza\u00e7\u00e3o, quais s\u00e3o as chances de compartilh\u00e1-las?"
+            },
+            "type": "slide-number"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "suggestionAnswer4a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer4b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer4c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer4d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "suggestionAnswer4e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 es lo que est\u00e1 faltando para que sus sugerencias sean consideradas por la empresa?",
+              "pt-br": "O que est\u00e1 faltando para as suas sugest\u00f5es serem consideradas pela empresa?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfPor qu\u00e9 crees que el feedback que recibe es considerado por la empresa?",
+              "pt-br": "Por que voc\u00ea acha que o feedback que recebe \u00e9 considerado pela empresa?"
+            },
+            "question_id": "suggestion4",
+            "text": {
+              "es-ar": "Se alienta a las personas a ser innovadoras, aunque algunas iniciativas pueden no ser exitosas",
+              "pt-br": "As pessoas s\u00e3o incentivados a serem inovadores, embora algumas iniciativas possam n\u00e3o ser bem-sucedidas"
+            },
+            "type": "radio-string"
+          }
+        ],
+        "submetric_id": "suggestions",
+        "text": {
+          "es-ar": "\u00bfLas opiniones y sugerencias de los empleados son consideradas por la organizaci\u00f3n?",
+          "pt-br": "As opni\u00f5es e sugest\u00f5es dos funcion\u00e1rios s\u00e3o consideradas pelos funcion\u00e1rios?"
+        }
+      },
+      {
+        "label": {
+          "es-ar": "Calidad",
+          "pt-br": "Qualidade"
+        },
+        "questions": [
+          {
+            "answers": [
+              {
+                "answer_id": "qualityAnswer1a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer1b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer1c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer1d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer1e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 est\u00e1 faltando para que lo feedback sea totalmente valiosa para usted ?",
+              "pt-br": "O que est\u00e1 faltando para o feedback ser totalmente valioso para voc\u00ea?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace lo feedback que recibe valioso?",
+              "pt-br": "Com que frequ\u00eancia o feedback deveria ser realizado para voc\u00ea entender como pode melhorar?"
+            },
+            "question_id": "quality1",
+            "text": {
+              "es-ar": "Voc\u00ea est\u00e1 satisfeito com a frequ\u00eancia de feedback proveniente do seu gestor direto?",
+              "pt-br": "O feedback que recebo me ajuda a crescer e se desenvolver?"
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "qualityAnswer2a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer2b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer2c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer2d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer2e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 est\u00e1 faltando para que lo feedback sea totalmente valiosa para usted ?",
+              "pt-br": "O que est\u00e1 faltando para o feedback ser totalmente valioso para voc\u00ea?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace lo feedback que recibe valioso?",
+              "pt-br": "O que torna o feedback que voc\u00ea recebe valioso?"
+            },
+            "question_id": "quality2",
+            "text": {
+              "es-ar": "\u00bfLo feedback que usted recibe es espec\u00edfico?",
+              "pt-br": "O feedback que voc\u00ea recebe \u00e9 espec\u00edfico?"
+            },
+            "type": "radio-card"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "qualityAnswer3a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer3b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer3c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer3d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer3e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 est\u00e1 faltando para que lo feedback sea totalmente valiosa para usted ?",
+              "pt-br": "O que est\u00e1 faltando para o feedback ser totalmente valioso para voc\u00ea?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace lo feedback que recibe valioso?",
+              "pt-br": "O que torna o feedback que voc\u00ea recebe valioso?"
+            },
+            "question_id": "quality3",
+            "text": {
+              "es-ar": "Cuando alguien me da feedback en el trabajo, se hace de manera respetuosa",
+              "pt-br": "Quando algu\u00e9m me d\u00e1 feedback no trabalho, \u00e9 feito de maneira respeitosa"
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "qualityAnswer4a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer4b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer4c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer4d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "qualityAnswer4e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfQu\u00e9 est\u00e1 faltando para que lo feedback sea totalmente valiosa para usted ?",
+              "pt-br": "O que est\u00e1 faltando para o feedback ser totalmente valioso para voc\u00ea?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfQu\u00e9 hace lo feedback que recibe valioso?",
+              "pt-br": "O que torna o feedback que voc\u00ea recebe valioso?"
+            },
+            "question_id": "quality4",
+            "text": {
+              "es-ar": "En una escala de 0 a 10, cu\u00e1l es el valor de lo feedback que recibe?",
+              "pt-br": "Em uma escala de 0 a 10, qual \u00e9 o valor do feedback que voc\u00ea recebe?"
+            },
+            "type": "slide-number"
+          }
+        ],
+        "submetric_id": "quality",
+        "text": {
+          "es-ar": "\u00bfLos empleados reciben feedback de alta calidad?",
+          "pt-br": "Os funcion\u00e1rios recebem feedback de alta qualidade?"
+        }
+      },
+      {
+        "label": {
+          "es-ar": "Frecuencia",
+          "pt-br": "Frequ\u00eancia"
+        },
+        "questions": [
+          {
+            "answers": [
+              {
+                "answer_id": "frequencyAnswer1a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer1b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer1c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer1d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer1e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfCon qu\u00e9 frecuencia el feedback deber\u00eda ser realizada para que usted entienda c\u00f3mo puede mejorar?",
+              "pt-br": "Com que frequ\u00eancia o feedback deveria ser realizado para voc\u00ea entender como pode melhorar?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfDe qu\u00e9 forma el feedback que recibes es lo suficientemente frecuente para ayudarte a mejorar?",
+              "pt-br": "De que forma o feedback que voc\u00ea recebe \u00e9 frequente o suficiente para te ajudar a melhorar?"
+            },
+            "question_id": "frequency1",
+            "text": {
+              "es-ar": "O feedback que recebo \u00e9 frequente o suficiente para me ajudar a entender como posso melhorar.",
+              "pt-br": "O feedback que recebo \u00e9 frequente o suficiente para me ajudar a entender como posso melhorar."
+            },
+            "type": "percent"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "frequencyAnswer2a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer2b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer2c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer2d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer2e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfCon qu\u00e9 frecuencia el feedback deber\u00eda ser realizada para que usted entienda c\u00f3mo puede mejorar?",
+              "pt-br": "Com que frequ\u00eancia o feedback deveria ser realizado para voc\u00ea entender como pode melhorar?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfDe qu\u00e9 forma el feedback que recibes es lo suficientemente frecuente para ayudarte a mejorar?",
+              "pt-br": "De que forma o feedback que voc\u00ea recebe \u00e9 frequente o suficiente para te ajudar a melhorar?"
+            },
+            "question_id": "frequency2",
+            "text": {
+              "es-ar": "Estoy satisfecho con la frecuencia de feedback de mis colegas",
+              "pt-br": "Estou satisfeito com a frequ\u00eancia de feedback dos meus colegas"
+            },
+            "type": "radio-string"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "frequencyAnswer3a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer3b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer3c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer3d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer3e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfCon qu\u00e9 frecuencia el feedback deber\u00eda ser realizada para que usted entienda c\u00f3mo puede mejorar?",
+              "pt-br": "Com que frequ\u00eancia o feedback deveria ser realizado para voc\u00ea entender como pode melhorar?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfDe qu\u00e9 forma el feedback que recibes es lo suficientemente frecuente para ayudarte a mejorar?",
+              "pt-br": "De que forma o feedback que voc\u00ea recebe \u00e9 frequente o suficiente para te ajudar a melhorar?"
+            },
+            "question_id": "frequency3",
+            "text": {
+              "es-ar": "\u00bfEst\u00e1 satisfecho con la frecuencia de feedback proveniente de su gestor directo?",
+              "pt-br": "Voc\u00ea est\u00e1 satisfeito com a frequ\u00eancia de feedback proveniente do seu gestor direto?"
+            },
+            "type": "percent"
+          },
+          {
+            "answers": [
+              {
+                "answer_id": "frequencyAnswer4a",
+                "score": -2,
+                "text": {
+                  "es-ar": "Desacuerdo totalmente",
+                  "pt-br": "Discordo totalmente"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer4b",
+                "score": -1,
+                "text": {
+                  "es-ar": "Desacuerdo",
+                  "pt-br": "Discordo"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer4c",
+                "score": 0,
+                "text": {
+                  "es-ar": "Neutral",
+                  "pt-br": "Neutro"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer4d",
+                "score": 1,
+                "text": {
+                  "es-ar": "Concuerdo",
+                  "pt-br": "Concordo"
+                }
+              },
+              {
+                "answer_id": "frequencyAnswer4e",
+                "score": 2,
+                "text": {
+                  "es-ar": "Concuerdo plenamente",
+                  "pt-br": "Concordo plenamente"
+                }
+              }
+            ],
+            "feedback_constructive": {
+              "es-ar": "\u00bfCon qu\u00e9 frecuencia el feedback deber\u00eda ser realizada para que usted entienda c\u00f3mo puede mejorar?",
+              "pt-br": "Com que frequ\u00eancia o feedback deveria ser realizado para voc\u00ea entender como pode melhorar?"
+            },
+            "feedback_positive": {
+              "es-ar": "\u00bfDe qu\u00e9 forma el feedback que recibes es lo suficientemente frecuente para ayudarte a mejorar?",
+              "pt-br": "De que forma o feedback que voc\u00ea recebe \u00e9 frequente o suficiente para te ajudar a melhorar?"
+            },
+            "question_id": "frequency4",
+            "text": {
+              "es-ar": "\u00bfCu\u00e1l de las siguientes opciones describe mejor la cantidad de feedback que usted recibe normalmente, en relaci\u00f3n a su trabajo?",
+              "pt-br": "Qual das seguintes op\u00e7\u00f5es descreve melhor a quantidade de feedback que voc\u00ea recebe normalmente, em rela\u00e7\u00e3o ao seu trabalho?"
+            },
+            "type": "radio-card"
+          }
+        ],
+        "submetric_id": "frequency",
+        "text": {
+          "es-ar": "\u00bfCon qu\u00e9 frecuencia los empleados reciben feedback?",
+          "pt-br": "Com que frequ\u00eancia os funcion\u00e1rios recebem feedback?"
+        }
+      }
+    ],
+    "text": {
+      "es-ar": "La m\u00e9trica Feedback representa tanto la calidad y la frecuencia de feedback que reciben los empleados, as\u00ed como la consideraci\u00f3n de sus opiniones y sugerencias por la organizaci\u00f3n.",
+      "pt-br": "A m\u00e9trica Feedback representa tanto a qualidade quanto a frequ\u00eancia de feedback que os funcion\u00e1rios recebem, bem como a considera\u00e7\u00e3o de suas opini\u00f5es e sugest\u00f5es pela organiza\u00e7\u00e3o."
+    }
+  }
+]

@@ -23,7 +23,7 @@ class Survey(Resource):
             'profile': 'test_profile',
             'role': 'test_role',
         }
-        return dao.find_temp()
+        return dao.survey_example()
 
     def post(self):
-        return dao.find_temp()
+        return dao.survey_example()
