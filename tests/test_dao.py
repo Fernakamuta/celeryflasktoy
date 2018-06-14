@@ -1,10 +1,13 @@
 import json
+import datetime as dt
 from pathlib import Path
+from copy import deepcopy
 
 import pytest
 import mongomock
 
-from app.dao import parse_i18n, DataAccessObject
+
+from app.services.dao import parse_i18n, DataAccessObject
 
 
 @pytest.fixture
@@ -21,7 +24,7 @@ def dao(dbname):
     client = mongomock.MongoClient()
     client[dbname].metrics.insert(metrics)
 
-    dao_ = DataAccessObject()
+    dao_ = DataAccessObject({'MONGO_URL': 'randomhost:42666'})
     dao_.client = client
     return dao_
 
@@ -65,3 +68,26 @@ class TestDao:
         records = dao.find_metrics(dbname, 'pt-br')
 
         assert len(records) == 3
+
+    def test_find_historic(self, dao, dbname):
+        email_in = 'test@test.com'
+        historic_in = {
+            'email': email_in,
+            'scores': [
+                {
+                    'question_id': 'q1',
+                    'score': -2,
+                    'date': dt.datetime(2017, 1, 1)
+                },
+                {
+                    'question_id': 'q2',
+                    'score': 2,
+                    'date': dt.datetime(2017, 1, 1)
+                },
+            ]
+        }
+        dao.client[dbname].historics.insert_one(deepcopy(historic_in))
+
+        record = dao.find_historic(dbname, email_in)
+
+        assert record == historic_in
