@@ -1,29 +1,24 @@
 from flask import Blueprint
 from flask_restplus import Api, Resource
 
-from .dao import DataAccessObject
+from app.services import Services
 
 
 bp_survey = Blueprint('survey', __name__)
 api = Api(bp_survey)
-dao = DataAccessObject()
+services = Services()
 
 
 @bp_survey.record_once
 def on_registration(state):
-    dao.init_app(state.app.config)
+    services.init_app(state.app.config)
 
 
 @api.route('/survey')
 class Survey(Resource):
     def get(self):
-        payload_in = {
-            'id': 'test_id',
-            'user': 'test_email',
-            'profile': 'test_profile',
-            'role': 'test_role',
-        }
-        return dao.survey_example()
+        return services.get_survey('survey-test', 'pt-br', 'test@test.com')
 
     def post(self):
-        return dao.survey_example()
+        return services.post_survey('survey-test', 'pt-br', 'test@test.com', {})
+

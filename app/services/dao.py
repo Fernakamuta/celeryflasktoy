@@ -21,10 +21,7 @@ def stringfy_id(record):
 
 
 class DataAccessObject:
-    def __init__(self):
-        self.client = None
-
-    def init_app(self, config):
+    def __init__(self, config):
         self.client = MongoClient(config['MONGO_URL'])
 
     def survey_example(self):
@@ -33,6 +30,17 @@ class DataAccessObject:
         return stringfy_id(record)
 
     def find_metrics(self, dbname, lang):
-        cursor = self.client[dbname].metrics.find()
-        records = parse_i18n(list(cursor), lang)
-        return [stringfy_id(each) for each in records]
+        cursor = self.client[dbname].metrics.find({}, {'_id': False})
+        return parse_i18n(list(cursor), lang)
+
+    def find_historic(self, dbname, email):
+        query = {
+            'email': email
+        }
+        proj = {
+            '_id': False
+        }
+        record = self.client[dbname].historics.find_one(query, proj)
+        if record:
+            return record
+        return {'email': email, 'scores': []}

@@ -1,0 +1,42 @@
+[
+  {
+    "email": "test@test.com",
+    "scores": [
+      {
+        "question_id": "q1",
+        "score": -2,
+        "date": "datetime"
+      },
+          {
+        "question_id": "q2",
+        "score": 0,
+        "date": "datetime"
+      },
+      {
+        "question_id": "q3",
+        "score": 2,
+        "date": "datetime"
+      }
+    ]
+  },
+    {
+    "email": "test@test.com",
+    "scores": [
+      {
+        "question_id": "q1",
+        "score": -2,
+        "date": "datetime"
+      },
+          {
+        "question_id": "q2",
+        "score": 0,
+        "date": "datetime"
+      },
+          {
+        "question_id": "q3",
+        "score": 2,
+        "date": "datetime"
+      }
+    ]
+  }
+]
