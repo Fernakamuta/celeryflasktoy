@@ -1,7 +1,10 @@
 from flask import Blueprint
 from flask_restplus import Api, Resource
+from webargs.flaskparser import use_kwargs
 
-from app.services import Services
+
+from .services import Services
+from .schemas import QuestionsSchema, headers_schema
 
 
 bp_survey = Blueprint('survey', __name__)
@@ -16,9 +19,11 @@ def on_registration(state):
 
 @api.route('/survey')
 class Survey(Resource):
-    def get(self):
-        return services.get_survey('survey-test', 'pt-br', 'test@test.com')
+    @use_kwargs(headers_schema)
+    def get(self, user, language):
+        return services.get_survey('survey-test', language, user['user'])
 
-    def post(self):
+    @use_kwargs(QuestionsSchema(strict=True))
+    @use_kwargs(headers_schema)
+    def post(self, user, language, questions):
         return services.post_survey('survey-test', 'pt-br', 'test@test.com', {})
-
