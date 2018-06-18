@@ -4,7 +4,7 @@ from webargs.flaskparser import use_kwargs
 
 
 from .services import Services
-from .schemas import QuestionsSchema, headers_schema
+from .schemas import SurveySchema, headers_schema
 
 
 bp_survey = Blueprint('survey', __name__)
@@ -21,9 +21,9 @@ def on_registration(state):
 class Survey(Resource):
     @use_kwargs(headers_schema)
     def get(self, user, language):
-        return services.get_survey('survey-test', language, user['user'])
+        return services.get_survey(user['tenant'], language, user['email'])
 
-    @use_kwargs(QuestionsSchema(strict=True))
+    @use_kwargs(SurveySchema(strict=True))
     @use_kwargs(headers_schema)
-    def post(self, user, language, questions):
-        return services.post_survey('survey-test', 'pt-br', 'test@test.com', {})
+    def post(self, user, language, survey):
+        return services.post_survey(user['tenant'], language, user['email'], {})
