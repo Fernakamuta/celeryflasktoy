@@ -24,11 +24,6 @@ class DataAccessObject:
     def __init__(self, config):
         self.client = MongoClient(config['MONGO_URL'])
 
-    def survey_example(self):
-        cursor = self.client['survey-test']['survey_example'].find()
-        record, *_ = list(cursor)
-        return stringfy_id(record)
-
     def find_metrics(self, dbname, lang):
         cursor = self.client[dbname].metrics.find({}, {'_id': False})
         return parse_i18n(list(cursor), lang)
