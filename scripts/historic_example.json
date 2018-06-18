@@ -1,0 +1,19 @@
+{
+  "email": "test@test.com",
+  "scores": [
+    {
+      "metric_id": "m1",
+      "submetric_id": "m1s1",
+      "question_id": "m1s1q1",
+      "score": -2,
+      "date": "datetime-object"
+    },
+    {
+      "metric_id": "m2",
+      "submetric_id": "m2s2",
+      "question_id": "m2s2q2",
+      "score": 0,
+      "date": "datetime-object"
+    }
+  ]
+}
