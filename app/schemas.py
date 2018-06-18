@@ -1,15 +1,22 @@
-from flask import current_app
-from jwt import decode, exceptions
-from marshmallow import Schema, validates, validates_schema
-from webargs import fields, ValidationError
+from marshmallow import (
+    Schema,
+    validates,
+    validates_schema,
+    ValidationError
+)
+from webargs import fields
+import json
 
-def validate_token(token):
+
+def get_user(data):
     try:
-        secret = current_app.config['JWT_SECRET']
-        payload = decode(token, secret)
-    except exceptions.DecodeError:
-        raise ValidationError('Invalid token', status_code=404)
-    return payload
+        user = json.loads(data)
+    except json.decoder.JSONDecodeError:
+        raise ValidationError('Invalid user data.')
+    if {'email', 'tenant'} <= set(user):
+        return user
+    else:
+        raise ValidationError('Missing user data.')
 
 
 def get_language(country_language):
@@ -49,11 +56,11 @@ class QuestionSchema(Schema):
             raise ValidationError('Invalid data for required field.')
 
 
-class QuestionsSchema(Schema):
-    questions = fields.Nested(QuestionSchema, many=True, required=True)
+class SurveySchema(Schema):
+    survey = fields.Nested(QuestionSchema, many=True, required=True)
 
 
 headers_schema = {
-    'user': fields.Function(deserialize=validate_token, load_from='Authorization', location='headers', required=True),
-    'language': fields.Function(deserialize=get_language, load_from='Accept-Language', location='headers')
+    'user': fields.Function(deserialize=get_user, load_from='Data', location='headers', required=True),
+    'language': fields.Function(deserialize=get_language, missing='pt-br', load_from='Accept-Language', location='headers')
 }
