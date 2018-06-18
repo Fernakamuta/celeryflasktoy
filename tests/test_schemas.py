@@ -1,8 +1,7 @@
 import pytest
 
 
-from app.schemas import get_language, validate_token, QuestionsSchema
-
+from app.schemas import get_language
 
 
 class TestSchema:

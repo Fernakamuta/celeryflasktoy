@@ -13,7 +13,7 @@ class Services:
     def get_survey(self, dbname, lang, email):
         metrics = self.dao.find_metrics(dbname, lang)
         historic = self.dao.find_historic(dbname, email)
-        return self.sampler.survey(metrics, historic)
+        return {'survey': self.sampler.survey(metrics, historic)}
 
     def post_survey(self, dbname, lang, email, payload):
         return payload

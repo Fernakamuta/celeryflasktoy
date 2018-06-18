@@ -67,7 +67,7 @@ class TestDao:
 
         records = dao.find_metrics(dbname, 'pt-br')
 
-        assert len(records) == 3
+        assert len(records) == 2
 
     def test_find_historic(self, dao, dbname):
         email_in = 'test@test.com'
