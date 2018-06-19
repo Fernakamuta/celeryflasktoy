@@ -5,11 +5,16 @@ from .sampler import Sampler
 
 
 def question2score(question, now):
+    if question['answered']:
+        answered = question['answered']['score']
+    else:
+        answered = None
+
     score = {
         'metric_id': question['metric_id'],
         'submetric_id': question['submetric_id'],
         'question_id': question['question_id'],
-        'score': question['answered']['score'],
+        'score': answered,
         'date': now,
     }
     return score
