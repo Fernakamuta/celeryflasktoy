@@ -15,5 +15,5 @@ class Services:
         historic = self.dao.find_historic(dbname, email)
         return {'survey': self.sampler.survey(metrics, historic['scores'])}
 
-    def post_survey(self, dbname, lang, email, payload):
+    def post_survey(self, dbname, email, payload):
         return payload
