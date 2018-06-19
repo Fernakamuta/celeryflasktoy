@@ -1,5 +1,7 @@
 from pymongo import MongoClient
 
+from .temp import filtered_metrics
+
 
 def parse_i18n(record, lang):
     default = 'pt-br'
@@ -26,7 +28,11 @@ class DataAccessObject:
 
     def find_metrics(self, dbname, lang):
         cursor = self.client[dbname].metrics.find({}, {'_id': False})
-        return parse_i18n(list(cursor), lang)
+
+        # temporary filter
+        records = filtered_metrics(list(cursor))
+
+        return parse_i18n(records, lang)
 
     def find_historic(self, dbname, email):
         query = {
