@@ -1,0 +1,153 @@
+{
+    "survey": [{
+            "answers": [{
+                    "answer_id": "promotorAnswer5a",
+                    "score": -2,
+                    "text": "Discordo totalmente"
+                },
+                {
+                    "answer_id": "promotorAnswer5b",
+                    "score": -1,
+                    "text": "Discordo"
+                },
+                {
+                    "answer_id": "promotorAnswer5c",
+                    "score": 0,
+                    "text": "Neutro"
+                },
+                {
+                    "answer_id": "promotorAnswer5d",
+                    "score": 1,
+                    "text": "Concordo"
+                },
+                {
+                    "answer_id": "promotorAnswer5e",
+                    "score": 2,
+                    "text": "Concordo plenamente"
+                }
+            ],
+            "answered": {
+                "answer_id": "promotorAnswer5e",
+                "score": 2,
+                "text": "Concordo plenamente"
+            },
+            "feedback_constructive": "O que está impedindo você de recomendar os produtos / serviços da empresa?",
+            "feedback_positive": "O que faz você querer recomendar os produtos/ serviços da empresa?",
+            "question_id": "promotor5",
+            "text": "Eu me considero um promotor da empresa",
+            "type": "radio-string",
+            "metric_id": "ambassadorship",
+            "submetric_id": "promotor"
+        },
+        {
+            "answers": [{
+                    "answer_id": "visionAnswer1a",
+                    "score": -2,
+                    "text": "Discordo totalmente"
+                },
+                {
+                    "answer_id": "visionAnswer1b",
+                    "score": -1,
+                    "text": "Discordo"
+                },
+                {
+                    "answer_id": "visionAnswer1c",
+                    "score": 0,
+                    "text": "Neutro"
+                },
+                {
+                    "answer_id": "visionAnswer1d",
+                    "score": 1,
+                    "text": "Concordo"
+                },
+                {
+                    "answer_id": "visionAnswer1e",
+                    "score": 2,
+                    "text": "Concordo plenamente"
+                }
+            ],
+            "answered": {
+                "answer_id": "visionAnswer1e",
+                "score": 2,
+                "text": "Concordo plenamente"
+            },
+            "feedback_constructive": "Por que você não acredita que a empresa é capaz de alcançar seus objetivos?",
+            "feedback_positive": "O que te faz acreditar que a empresa é capaz de alcançar seus objetivos?",
+            "question_id": "vision1",
+            "text": "Você acredita que sua empresa é capaz de alcançar seus objetivos?",
+            "type": "radio-string",
+            "metric_id": "alignment",
+            "submetric_id": "vision"
+        },
+        {
+            "answers": [{
+                    "answer_id": "trust_answer4a",
+                    "score": -2,
+                    "text": "nenhuma"
+                },
+                {
+                    "answer_id": "trust_answer4b",
+                    "score": -2,
+                    "text": "1"
+                },
+                {
+                    "answer_id": "trust_answer4c",
+                    "score": -2,
+                    "text": "2"
+                },
+                {
+                    "answer_id": "trust_answer4d",
+                    "score": -2,
+                    "text": "3"
+                },
+                {
+                    "answer_id": "trust_answer4e",
+                    "score": -1,
+                    "text": "4"
+                },
+                {
+                    "answer_id": "trust_answer4f",
+                    "score": -1,
+                    "text": "5"
+                },
+                {
+                    "answer_id": "trust_answer4g",
+                    "score": -1,
+                    "text": "6"
+                },
+                {
+                    "answer_id": "trust_answer4h",
+                    "score": 0,
+                    "text": "7"
+                },
+                {
+                    "answer_id": "trust_answer4i",
+                    "score": 1,
+                    "text": "8"
+                },
+                {
+                    "answer_id": "trust_answer4j",
+                    "score": 2,
+                    "text": "9"
+                },
+                {
+                    "answer_id": "trust_answer4k",
+                    "score": 2,
+                    "text": "Extremamente Satisfeito"
+                }
+            ],
+            "answered": {
+                "answer_id": "trust_answer4k",
+                "score": 2,
+                "text": "Extremamente Satisfeito"
+            },
+            "feedback_constructive": "O que está faltando para o feedback ser totalmente valioso para você?",
+            "feedback_positive": "O que torna o feedback que você recebe valioso?",
+            "question_id": "quality4",
+            "text": "Em uma escala de 0 a 10, qual é o valor do feedback que você recebe?",
+            "type": "slide-number",
+            "metric_id": "feedback",
+            "submetric_id": "quality"
+        }
+    ]
+}

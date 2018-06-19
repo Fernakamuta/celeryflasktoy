@@ -75,11 +75,15 @@ class TestDao:
             'email': email_in,
             'scores': [
                 {
+                    'metric_id': 'm1',
+                    'submetric_id': 'sm1',
                     'question_id': 'q1',
                     'score': -2,
                     'date': dt.datetime(2017, 1, 1)
                 },
                 {
+                    'metric_id': 'm2',
+                    'submetric_id': 'sm2',
                     'question_id': 'q2',
                     'score': 2,
                     'date': dt.datetime(2017, 1, 1)
@@ -91,3 +95,34 @@ class TestDao:
         record = dao.find_historic(dbname, email_in)
 
         assert record == historic_in
+
+    def test_update_historic(self, dao, dbname):
+        email_in = 'test@test.com'
+        scores = [
+            {
+                'metric_id': 'm1',
+                'submetric_id': 'sm1',
+                'question_id': 'q1',
+                'score': -2,
+                'date': dt.datetime(2017, 1, 1)
+            },
+            {
+                'metric_id': 'm2',
+                'submetric_id': 'sm2',
+                'question_id': 'q2',
+                'score': 2,
+                'date': dt.datetime(2017, 1, 1)
+            },
+        ]
+
+        record_expected = {
+            'email': email_in,
+            'scores': scores
+        }
+
+        dao.update_historic(dbname, email_in, scores)
+
+        record = dao.client[dbname].historics.find_one({'email': email_in}, {'_id': False})
+
+        assert record == record_expected
+        
