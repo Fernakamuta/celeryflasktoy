@@ -1,11 +1,10 @@
-import json
-
 from marshmallow import (
     Schema,
+    validate,
     validates_schema,
     ValidationError
 )
-from marshmallow.fields import Str, Function, Int, List
+from marshmallow.fields import Str, Function, Int, List, Float
 from webargs.fields import Nested
 
 
@@ -18,13 +17,17 @@ def get_language(country_language):
 
 
 class QuestionSchema(Schema):
+    metric_id = Str(required=True)
+    submetric_id = Str(required=True)
     question_id = Str(required=True)
+    feedback_constructive = Str(required=True)
+    feedback_positive = Str(required=True)
     text = Str(required=True)
     type = Str(required=True)
     answers = List(Nested({
         'answer_id': Str(required=True),
         'text': Str(required=True),
-        'score': Int(required=True, validate=lambda val: val >= -2 and val <= 2)
+        'score': Float(required=True, validate=validate.OneOf([-2,-1,0,1,2]))
     }))
     answered = Nested({
         'answer_id': Str(),

@@ -11,6 +11,7 @@ from app.services.sampler.parser import (
     _merge_question_dts,
     survey_from_tuples
 )
+from app.services import survey2scores
 
 
 @pytest.fixture
@@ -19,6 +20,14 @@ def metrics():
     with path.joinpath('metrics_example.json').open() as file:
         metrics_ = json.load(file)
     return metrics_
+
+
+@pytest.fixture
+def survey():
+    path = Path(__file__).parent.joinpath('data', 'survey_post_example.json')
+    with path.open() as file:
+        survey_ = json.load(file)
+    return survey_['survey']
 
 
 class TestParser:
@@ -190,3 +199,35 @@ class TestParser:
         survey = survey_from_tuples(metrics, tuples)
 
         assert survey == survey_expected
+
+
+class TestParserFromPost:
+    def test_survey2scores(self, survey):
+        now = dt.datetime.now()
+        scores_expected = [
+            {
+                'metric_id': 'ambassadorship',
+                'submetric_id': 'promotor',
+                'question_id': 'promotor5',
+                'score': 2,
+                'date': now
+            },
+            {
+                'metric_id': 'alignment',
+                'submetric_id': 'vision',
+                'question_id': 'vision1',
+                'score': 2,
+                'date': now
+            },
+            {
+                'metric_id': 'feedback',
+                'submetric_id': 'quality',
+                'question_id': 'quality4',
+                'score': 2,
+                'date': now
+            },
+        ]
+
+        scores = survey2scores(survey, now)
+
+        assert scores == scores_expected

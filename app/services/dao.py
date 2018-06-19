@@ -45,3 +45,20 @@ class DataAccessObject:
         if record:
             return record
         return {'email': email, 'scores': []}
+
+    def update_historic(self, dbname, email, scores):
+        coll = self.client[dbname].historics
+        query = {
+            'email': email
+        }
+        update = {
+            '$push': {
+                'scores': {
+                    '$each': scores
+                }
+            }
+        }
+        proj = {
+            '_id': False
+        }
+        coll.find_one_and_update(query, update, proj, upsert=True)

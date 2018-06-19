@@ -1,5 +1,22 @@
+import datetime as dt
+
 from .dao import DataAccessObject
 from .sampler import Sampler
+
+
+def question2score(question, now):
+    score = {
+        'metric_id': question['metric_id'],
+        'submetric_id': question['submetric_id'],
+        'question_id': question['question_id'],
+        'score': question['answered']['score'],
+        'date': now,
+    }
+    return score
+
+
+def survey2scores(survey, now):
+    return [question2score(question, now) for question in survey]
 
 
 class Services:
@@ -15,5 +32,8 @@ class Services:
         historic = self.dao.find_historic(dbname, email)
         return {'survey': self.sampler.survey(metrics, historic['scores'])}
 
-    def post_survey(self, dbname, email, payload):
-        return payload
+    def post_survey(self, dbname, email, survey):
+        now = dt.datetime.now()
+        scores = survey2scores(survey, now)
+        self.dao.update_historic(dbname, email, scores)
+        return survey
