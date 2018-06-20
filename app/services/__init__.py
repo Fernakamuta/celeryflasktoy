@@ -5,10 +5,10 @@ from .sampler import Sampler
 
 
 def question2score(question, now):
-    try:
+
+    answered = None
+    if question['answered']:
         answered = question['answered']['score']
-    except TypeError:
-        answered = None
 
     score = {
         'metric_id': question['metric_id'],
