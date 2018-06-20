@@ -209,7 +209,7 @@ class TestParserFromPost:
                 'metric_id': 'ambassadorship',
                 'submetric_id': 'promotor',
                 'question_id': 'promotor5',
-                'score': 2,
+                'score': None,
                 'date': now
             },
             {

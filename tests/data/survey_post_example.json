@@ -26,11 +26,7 @@
                     "text": "Concordo plenamente"
                 }
             ],
-            "answered": {
-                "answer_id": "promotorAnswer5e",
-                "score": 2,
-                "text": "Concordo plenamente"
-            },
+            "answered": null,
             "feedback_constructive": "O que está impedindo você de recomendar os produtos / serviços da empresa?",
             "feedback_positive": "O que faz você querer recomendar os produtos/ serviços da empresa?",
             "question_id": "promotor5",
