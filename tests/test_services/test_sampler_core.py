@@ -1,7 +1,7 @@
 import pytest
 import datetime as dt
 
-from app.services.sampler.core import select_questions
+from app.survey.sampler.core import select_questions
 
 
 class TestSampler:

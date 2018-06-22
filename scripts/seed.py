@@ -20,5 +20,4 @@ def replace_collection(dbname, collection):
 
 
 if __name__ == '__main__':
-    replace_collection('teamculture-local', 'survey_example')
     replace_collection('teamculture-local', 'metrics')
