@@ -4,7 +4,7 @@ from .dao import DataAccessObject
 from .sampler import Sampler
 
 
-def question2score(question, now):
+def question2score(question, groups, now):
 
     answered = None
     if question['answered']:
@@ -14,14 +14,15 @@ def question2score(question, now):
         'metric_id': question['metric_id'],
         'submetric_id': question['submetric_id'],
         'question_id': question['question_id'],
+        'group_ids': groups,
         'score': answered,
         'date': now,
     }
     return score
 
 
-def survey2scores(survey, now):
-    return [question2score(question, now) for question in survey]
+def survey2scores(survey, groups, now):
+    return [question2score(question, groups, now) for question in survey]
 
 
 class Services:
@@ -37,8 +38,8 @@ class Services:
         historic = self.dao.find_historic(dbname, email)
         return {'survey': self.sampler.survey(metrics, historic['scores'])}
 
-    def post_survey(self, dbname, email, survey):
+    def post_survey(self, dbname, email, survey, groups):
         now = dt.datetime.now()
-        scores = survey2scores(survey, now)
+        scores = survey2scores(survey, groups, now)
         self.dao.update_historic(dbname, email, scores)
         return survey
