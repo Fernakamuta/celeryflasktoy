@@ -16,6 +16,10 @@ def get_language(country_language):
     return 'pt-br'
 
 
+def get_groups(groups):
+    return groups.split(',')
+
+
 class QuestionSchema(Schema):
     metric_id = Str(required=True)
     submetric_id = Str(required=True)
@@ -27,7 +31,7 @@ class QuestionSchema(Schema):
     answers = List(Nested({
         'answer_id': Str(required=True),
         'text': Str(required=True),
-        'score': Float(required=True, validate=validate.OneOf([-2,-1,0,1,2]))
+        'score': Float(required=True, validate=validate.OneOf([-2, -1, 0, 1, 2]))
     }))
     answered = Nested({
         'answer_id': Str(),
@@ -53,5 +57,6 @@ class SurveySchema(Schema):
 headers_schema = {
     'email': Str(required=True, load_from='Email', location='headers'),
     'tenant': Str(required=True, load_from='Tenant', location='headers'),
-    'language': Function(deserialize=get_language, missing='pt-br', load_from='Accept-Language', location='headers')
+    'groups': Function(required=True, deserialize=get_groups, load_from='Groups', location='headers'),
+    'language': Function(deserialize=get_language, missing='pt-br', load_from='Accept-Language', location='headers'),
 }

@@ -20,10 +20,10 @@ def on_registration(state):
 @api.route('/survey')
 class Survey(Resource):
     @use_kwargs(headers_schema)
-    def get(self, tenant, language, email):
+    def get(self, tenant, language, email, groups, **kwargs):
         return services.get_survey(tenant, language, email)
 
     @use_kwargs(SurveySchema(strict=True))
     @use_kwargs(headers_schema)
-    def post(self, tenant, language, email, survey):
-        return services.post_survey(tenant, email, survey)
+    def post(self, tenant, email, survey, groups, **kwargs):
+        return services.post_survey(tenant, email, survey, groups)

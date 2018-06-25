@@ -204,10 +204,12 @@ class TestParser:
 class TestParserFromPost:
     def test_survey2scores(self, survey):
         now = dt.datetime.now()
+        groups = ['sciensa', 'teamculture']
         scores_expected = [
             {
                 'metric_id': 'ambassadorship',
                 'submetric_id': 'promotor',
+                'group_ids': ['sciensa', 'teamculture'],
                 'question_id': 'promotor5',
                 'score': None,
                 'date': now
@@ -215,6 +217,7 @@ class TestParserFromPost:
             {
                 'metric_id': 'alignment',
                 'submetric_id': 'vision',
+                'group_ids': ['sciensa', 'teamculture'],
                 'question_id': 'vision1',
                 'score': 2,
                 'date': now
@@ -222,12 +225,13 @@ class TestParserFromPost:
             {
                 'metric_id': 'feedback',
                 'submetric_id': 'quality',
+                'group_ids': ['sciensa', 'teamculture'],
                 'question_id': 'quality4',
                 'score': 2,
                 'date': now
             },
         ]
 
-        scores = survey2scores(survey, now)
+        scores = survey2scores(survey, groups, now)
 
         assert scores == scores_expected
