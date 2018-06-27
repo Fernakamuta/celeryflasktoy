@@ -8,24 +8,10 @@ from marshmallow.fields import Str, Function, Int, List, Float
 from webargs.fields import Nested
 
 
-def get_language(country_language):
-    if country_language is None:
-        return 'pt-br'
-    if country_language[:2] == 'es':
-        return 'es-ar'
-    return 'pt-br'
-
-
-def get_groups(groups):
-    return groups.split(',')
-
-
 class QuestionSchema(Schema):
     metric_id = Str(required=True)
     submetric_id = Str(required=True)
     question_id = Str(required=True)
-    feedback_constructive = Str(required=True)
-    feedback_positive = Str(required=True)
     text = Str(required=True)
     type = Str(required=True)
     answers = List(Nested({
@@ -52,6 +38,18 @@ class QuestionSchema(Schema):
 
 class SurveySchema(Schema):
     survey = Nested(QuestionSchema, many=True, required=True)
+
+
+def get_language(country_language):
+    if country_language is None:
+        return 'pt-br'
+    if country_language[:2] == 'es':
+        return 'es-ar'
+    return 'pt-br'
+
+
+def get_groups(groups):
+    return groups.split(',')
 
 
 headers_schema = {

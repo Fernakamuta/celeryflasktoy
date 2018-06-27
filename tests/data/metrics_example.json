@@ -11,12 +11,14 @@
               {
                 "answer_id": "m1s1q1a1",
                 "score": -2,
-                "text": "text-m1s1q1a1"
+                "text": "text-m1s1q1a1",
+                "feedback": "positive"
               },
               {
                 "answer_id": "m1s1q1a2",
                 "score": 0,
-                "text": "text-m1s1q1a2"
+                "text": "text-m1s1q1a2",
+                "feedback": "negative"
               }
             ],
             "question_id": "m1s1q1",
@@ -28,12 +30,14 @@
               {
                 "answer_id": "m1s1q2a1",
                 "score": -2,
-                "text": "text-m1s1q2a1"
+                "text": "text-m1s1q2a1",
+                "feedback": "positive"
               },
               {
                 "answer_id": "m1s1q2a2",
                 "score": 0,
-                "text": "text-m1s1q2a2"
+                "text": "text-m1s1q2a2",
+                "feedback": "positive"
               }
             ],
             "question_id": "m1s1q2",
@@ -52,12 +56,14 @@
               {
                 "answer_id": "m1s2q1a1",
                 "score": -2,
-                "text": "text-m1s2q1a1"
+                "text": "text-m1s2q1a1",
+                "feedback": "positive"
               },
               {
                 "answer_id": "m1s2q1a2",
                 "score": 0,
-                "text": "text-m1s2q1a2"
+                "text": "text-m1s2q1a2",
+                "feedback": "positive"
               }
             ],
             "question_id": "m1s2q1",
@@ -69,12 +75,14 @@
               {
                 "answer_id": "m1s2q2a1",
                 "score": -2,
-                "text": "text-m1s2q2a1"
+                "text": "text-m1s2q2a1",
+                "feedback": "positive"
               },
               {
                 "answer_id": "m1s2q2a2",
                 "score": 0,
-                "text": "text-m1s2q2a2"
+                "text": "text-m1s2q2a2",
+                "feedback": "positive"
               }
             ],
             "question_id": "m1s2q2",
@@ -99,12 +107,14 @@
               {
                 "answer_id": "m2s1q1a1",
                 "score": -2,
-                "text": "text-m2s1q1a1"
+                "text": "text-m2s1q1a1",
+                "feedback": "positive"
               },
               {
                 "answer_id": "m2s1q1a2",
                 "score": 0,
-                "text": "text-m2s1q1a2"
+                "text": "text-m2s1q1a2",
+                "feedback": "positive"
               }
             ],
             "question_id": "m2s1q1",
@@ -116,12 +126,14 @@
               {
                 "answer_id": "m2s1q2a1",
                 "score": -2,
-                "text": "text-m2s1q2a1"
+                "text": "text-m2s1q2a1",
+                "feedback": "positive"
               },
               {
                 "answer_id": "m2s1q2a2",
                 "score": 0,
-                "text": "text-m2s1q2a2"
+                "text": "text-m2s1q2a2",
+                "feedback": "positive"
               }
             ],
             "question_id": "m2s1q2",
@@ -140,12 +152,14 @@
               {
                 "answer_id": "m2s2q1a1",
                 "score": -2,
-                "text": "text-m2s2q1a1"
+                "text": "text-m2s2q1a1",
+                "feedback": "positive"
               },
               {
                 "answer_id": "m2s2q1a2",
                 "score": 0,
-                "text": "text-m2s2q1a2"
+                "text": "text-m2s2q1a2",
+                "feedback": "positive"
               }
             ],
             "question_id": "m2s2q1",
@@ -157,12 +171,14 @@
               {
                 "answer_id": "m2s2q2a1",
                 "score": -2,
-                "text": "text-m2s2q2a1"
+                "text": "text-m2s2q2a1",
+                "feedback": "positive"
               },
               {
                 "answer_id": "m2s2q2a2",
                 "score": 0,
-                "text": "text-m2s2q2a2"
+                "text": "text-m2s2q2a2",
+                "feedback": "positive"
               }
             ],
             "question_id": "m2s2q2",
