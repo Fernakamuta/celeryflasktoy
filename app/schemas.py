@@ -2,7 +2,6 @@ from marshmallow import (
     Schema,
     validate,
     validates_schema,
-    post_load,
     ValidationError
 )
 from marshmallow.fields import Str, Function, Int, List, Float
@@ -39,11 +38,6 @@ class QuestionSchema(Schema):
 
 class SurveySchema(Schema):
     survey = Nested(QuestionSchema, many=True, required=True)
-    
-    @post_load
-    def clean_feedbacks(self, data):
-        print('DATA:')
-
 
 
 def get_language(country_language):

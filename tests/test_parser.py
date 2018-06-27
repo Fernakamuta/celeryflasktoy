@@ -9,7 +9,8 @@ from app.services.sampler.parser import (
     _question_dts_from_scores,
     _question_dts_from_metrics,
     _merge_question_dts,
-    survey_from_tuples
+    _create_question,
+    survey_from_tuples,
 )
 from app.services import survey2scores
 
@@ -63,18 +64,18 @@ class TestParser:
     def test_question_dts_from_historic1(self):
         scores = [
             {
-                "metric_id": "m1",
-                "submetric_id": "m1s1",
-                "question_id": "m1s1q1",
-                "score": -2,
-                "date": dt.datetime(2017, 1, 1),
+                'metric_id': 'm1',
+                'submetric_id': 'm1s1',
+                'question_id': 'm1s1q1',
+                'score': -2,
+                'date': dt.datetime(2017, 1, 1),
             },
             {
-                "metric_id": "m2",
-                "submetric_id": "m2s2",
-                "question_id": "m2s2q2",
-                "score": 0,
-                "date": dt.datetime(2017, 2, 1),
+                'metric_id': 'm2',
+                'submetric_id': 'm2s2',
+                'question_id': 'm2s2q2',
+                'score': 0,
+                'date': dt.datetime(2017, 2, 1),
             }
         ]
         question_dts_expected = {
@@ -89,18 +90,18 @@ class TestParser:
     def test_question_dts_from_historic2(self):
         scores = [
             {
-                "metric_id": "m1",
-                "submetric_id": "m1s1",
-                "question_id": "m1s1q1",
-                "score": -2,
-                "date": dt.datetime(2017, 1, 1),
+                'metric_id': 'm1',
+                'submetric_id': 'm1s1',
+                'question_id': 'm1s1q1',
+                'score': -2,
+                'date': dt.datetime(2017, 1, 1),
             },
             {
-                "metric_id": "m1",
-                "submetric_id": "m1s1",
-                "question_id": "m1s1q1",
-                "score": 0,
-                "date": dt.datetime(2017, 2, 1),
+                'metric_id': 'm1',
+                'submetric_id': 'm1s1',
+                'question_id': 'm1s1q1',
+                'score': 0,
+                'date': dt.datetime(2017, 2, 1),
             },
         ]
         question_dts_expected = {
@@ -110,6 +111,56 @@ class TestParser:
         question_dts = _question_dts_from_scores(scores)
 
         assert question_dts == question_dts_expected
+
+    def test_create_question(self):
+        m_id = 'm1'
+        s_id = 's1'
+
+        question_input = {
+            'question_id': 'm1s1q1',
+            'text': 'text-m1s1q1',
+            'type': 'radio-string',
+            'answers': [
+                {
+                    'answer_id': 'm1s1q1a1',
+                    'score': -2,
+                    'text': 'text-m1s1q1a1',
+                    'feedback': 'positive'
+                },
+                {
+                    'answer_id': 'm1s1q1a2',
+                    'score': 0,
+                    'text': 'text-m1s1q1a2',
+                    'feedback': 'negative'
+                }
+            ],
+        }
+
+        question_expected = {
+            'metric_id': 'm1',
+            'submetric_id': 's1',
+            'question_id': 'm1s1q1',
+            'text': 'text-m1s1q1',
+            'type': 'radio-string',
+            'answers': [
+                {
+                    'answer_id': 'm1s1q1a1',
+                    'score': -2,
+                    'text': 'text-m1s1q1a1',
+                    'feedback': 'positive'
+                },
+                {
+                    'answer_id': 'm1s1q1a2',
+                    'score': 0,
+                    'text': 'text-m1s1q1a2',
+                    'feedback': 'negative'
+                }
+            ]
+        }
+
+        question = _create_question(m_id, s_id, question_input)
+
+        assert question == question_expected
 
     def test_merge_question_dts(self):
         old = dt.datetime(dt.MINYEAR, 1, 1)
@@ -150,6 +201,7 @@ class TestParser:
 
         assert question_dts == question_dts_expected
 
+
     def test_survey_from_tuples(self, metrics):
         tuples = [
             ('m1', 'm1s1', 'm1s1q1'),
@@ -157,42 +209,44 @@ class TestParser:
         ]
         survey_expected = [
             {
-                "metric_id": "m1",
-                "submetric_id": "m1s1",
-                "question_id": "m1s1q1",
-                "answers": [
+                'metric_id': 'm1',
+                'submetric_id': 'm1s1',
+                'question_id': 'm1s1q1',
+                'answers': [
                     {
-                        "answer_id": "m1s1q1a1",
-                        "score": -2,
-                        "text": "text-m1s1q1a1"
+                        'answer_id': 'm1s1q1a1',
+                        'score': -2,
+                        'text': 'text-m1s1q1a1',
                     },
                     {
-                        "answer_id": "m1s1q1a2",
-                        "score": 0,
-                        "text": "text-m1s1q1a2"
+                        'answer_id': 'm1s1q1a2',
+                        'score': 0,
+                        'text': 'text-m1s1q1a2',
                     }
                 ],
-                "text": "text-m1s1q1",
-                "type": "radio-string",
+                'text': 'text-m1s1q1',
+                'type': 'radio-string',
             },
             {
-                "metric_id": "m2",
-                "submetric_id": "m2s1",
-                "question_id": "m2s1q2",
-                "answers": [
+                'metric_id': 'm2',
+                'submetric_id': 'm2s1',
+                'question_id': 'm2s1q2',
+                'answers': [
                     {
-                        "answer_id": "m2s1q2a1",
-                        "score": -2,
-                        "text": "text-m2s1q2a1"
+                        'answer_id': 'm2s1q2a1',
+                        'score': -2,
+                        'text': 'text-m2s1q2a1',
+                        'feedback': 'positive'
                     },
                     {
-                        "answer_id": "m2s1q2a2",
-                        "score": 0,
-                        "text": "text-m2s1q2a2"
+                        'answer_id': 'm2s1q2a2',
+                        'score': 0,
+                        'text': 'text-m2s1q2a2',
+                        'feedback': 'positive'
                     }
                 ],
-                "text": "text-m2s1q2",
-                "type": "radio-string"
+                'text': 'text-m2s1q2',
+                'type': 'radio-string'
             },
         ]
 
