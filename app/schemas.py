@@ -4,7 +4,7 @@ from marshmallow import (
     validates_schema,
     ValidationError
 )
-from marshmallow.fields import Str, Function, Int, List, Float
+from marshmallow.fields import Str, Function, Int, List, Float, Boolean
 from webargs.fields import Nested
 
 
@@ -15,25 +15,73 @@ class QuestionSchema(Schema):
     text = Str(required=True)
     type = Str(required=True)
     answers = List(Nested({
+        'feedback': Str(),
         'answer_id': Str(required=True),
         'text': Str(required=True),
         'score': Float(required=True, validate=validate.OneOf([-2, -1, 0, 1, 2]))
-    }))
+    }), required=True)
     answered = Nested({
-        'answer_id': Str(),
-        'text': Str(),
-        'score': Int()
-    }, allow_none=True)
+        'answer_id': Str(required=True),
+        'text': Str(required=True),
+        'score': Int(required=True),
+        'feedback': Nested({
+            'question': Str(required=True),
+            'answer': Str(required=True),
+            'isAnnonymous': Boolean(required=True)
+        }, allow_none=True)
+    }, allow_none=True, strict=True, required=True)
 
-    @validates_schema
+    @staticmethod
+    def _get_answers(question):
+        return question['answered'], question['answers']
+
+    @staticmethod
+    def _has_feedback(answers):
+        for answer in answers:
+            if 'feedback' not in answer:
+                return False
+        return True
+
+    @staticmethod
+    def _remove_feedback(answer):
+        answer_new = {**answer}
+        del answer_new['feedback']
+        return answer_new
+
+    @staticmethod
+    def _get_original(answer):
+        answer_original = {
+            **answer,
+            'feedback' : answer['feedback']['question']
+        }
+        return answer_original
+
+
+    @validates_schema(skip_on_field_errors=True)
     def validate_answered(self, question):
+        answered, answers = self._get_answers(question)
 
-        if 'answered' not in question:
-            raise ValidationError('Missing data for required field.')
+        # Allows skip question
+        if answered == None:
+            return
 
-        answered = question['answered']
-        if answered is not None and answered not in question['answers']:
-            raise ValidationError('Invalid data for required field.')
+        has_feedback = self._has_feedback(answers)
+
+        if has_feedback:
+        # Validates Answered
+            if 'feedback' not in answered:
+                raise ValidationError('Missing feedback for answer.')
+
+            none_feedback = answered['feedback'] == None
+
+            if none_feedback:
+                answers = [self._remove_feedback(answer) for answer in answers]
+                answered = self._remove_feedback(answered)
+            else:
+                answered = self._get_original(answered)
+
+        if answered not in answers:
+            raise ValidationError('Invalid answer.') 
 
 
 class SurveySchema(Schema):
