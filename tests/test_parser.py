@@ -266,6 +266,7 @@ class TestParserFromPost:
                 'group_ids': ['sciensa', 'teamculture'],
                 'question_id': 'promotor5',
                 'score': None,
+                'feedback': None,
                 'date': now
             },
             {
@@ -274,6 +275,7 @@ class TestParserFromPost:
                 'group_ids': ['sciensa', 'teamculture'],
                 'question_id': 'vision1',
                 'score': 2,
+                'feedback': None,
                 'date': now
             },
             {
@@ -282,6 +284,11 @@ class TestParserFromPost:
                 'group_ids': ['sciensa', 'teamculture'],
                 'question_id': 'quality4',
                 'score': 2,
+                'feedback': {
+                    "question": "O que te faz acreditar que a empresa é capaz de alcançar seus objetivos ?",
+                    "answer": "Porque a empresa é demais!",
+                    "is_annonymous": False
+                },
                 'date': now
             },
         ]

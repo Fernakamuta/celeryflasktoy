@@ -27,7 +27,7 @@ class QuestionSchema(Schema):
         'feedback': Nested({
             'question': Str(required=True),
             'answer': Str(required=True),
-            'isAnnonymous': Boolean(required=True)
+            'is_annonymous': Boolean(required=True)
         }, allow_none=True)
     }, allow_none=True, strict=True, required=True)
 
