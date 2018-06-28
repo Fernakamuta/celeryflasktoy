@@ -144,11 +144,11 @@
                 }
             ],
             "answered": {
-                "feedback": {
-                    "question": "O que te faz acreditar que a empresa é capaz de alcançar seus objetivos ?",
-                    "answer": "Porque a empresa é demais!",
+                "feedback_answer": {
+                    "text": "Porque a empresa é demais!",
                     "is_annonymous": false
                 },
+                "feedback": "O que te faz acreditar que a empresa é capaz de alcançar seus objetivos ?",
                 "answer_id": "trust_answer4k",
                 "score": 2,
                 "text": "Extremamente Satisfeito"

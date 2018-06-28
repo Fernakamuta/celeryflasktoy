@@ -1,11 +1,13 @@
 from marshmallow import (
     Schema,
     validate,
+    validates,
     validates_schema,
     ValidationError
 )
 from marshmallow.fields import Str, Function, Int, List, Float, Boolean
 from webargs.fields import Nested
+from copy import deepcopy
 
 
 class QuestionSchema(Schema):
@@ -24,16 +26,24 @@ class QuestionSchema(Schema):
         'answer_id': Str(required=True),
         'text': Str(required=True),
         'score': Int(required=True),
-        'feedback': Nested({
-            'question': Str(required=True),
-            'answer': Str(required=True),
+        'feedback': Str(),
+        'feedback_answer': Nested({
+            'text': Str(required=True),
             'is_annonymous': Boolean(required=True)
         }, allow_none=True)
-    }, allow_none=True, strict=True, required=True)
+    }, allow_none=True, required=True)
+
+
+    @staticmethod
+    def _has_duplicated(answers):
+        unique_answers = set([tuple(answer.items()) for answer in answers])
+        return len(answers) != len(unique_answers)
+
 
     @staticmethod
     def _get_answers(question):
         return question['answered'], question['answers']
+
 
     @staticmethod
     def _has_feedback(answers):
@@ -42,19 +52,21 @@ class QuestionSchema(Schema):
                 return False
         return True
 
-    @staticmethod
-    def _remove_feedback(answer):
-        answer_new = {**answer}
-        del answer_new['feedback']
-        return answer_new
 
-    @staticmethod
-    def _get_original(answer):
-        answer_original = {
-            **answer,
-            'feedback' : answer['feedback']['question']
-        }
-        return answer_original
+    def _is_subset(self, answered, answers):
+        answered = deepcopy(answered)
+
+        if self._has_feedback(answers):
+            del answered['feedback_answer']
+
+        return answered in answers
+            
+
+    @validates('answers')
+    def validate_answers(self, answers):
+         has_duplicated = self._has_duplicated(answers)
+         if has_duplicated:
+             raise ValidationError('Invalid answers array.')
 
 
     @validates_schema(skip_on_field_errors=True)
@@ -62,26 +74,23 @@ class QuestionSchema(Schema):
         answered, answers = self._get_answers(question)
 
         # Allows skip question
-        if answered == None:
+        if not answered:
             return
 
         has_feedback = self._has_feedback(answers)
-
         if has_feedback:
-        # Validates Answered
-            if 'feedback' not in answered:
-                raise ValidationError('Missing feedback for answer.')
 
-            none_feedback = answered['feedback'] == None
+        # Validate answered feedback fields
+            if not set(answered) >= {'feedback', 'feedback_answer'}:
+                raise ValidationError('Missing feedback or feedback_answer.')
+            
+            if not answered['feedback_answer'] == None and not set(answered['feedback_answer']) >= {'text', 'is_annonymous'}:
+                raise ValidationError('Missing fields text or is_annonnymous at feedback_answer.')
 
-            if none_feedback:
-                answers = [self._remove_feedback(answer) for answer in answers]
-                answered = self._remove_feedback(answered)
-            else:
-                answered = self._get_original(answered)
 
-        if answered not in answers:
-            raise ValidationError('Invalid answer.') 
+        is_answered_subset = self._is_subset(answered, answers)
+        if not is_answered_subset:
+            raise ValidationError('Invalid answered.') 
 
 
 class SurveySchema(Schema):

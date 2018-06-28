@@ -265,6 +265,7 @@ class TestParserFromPost:
                 'submetric_id': 'promotor',
                 'group_ids': ['sciensa', 'teamculture'],
                 'question_id': 'promotor5',
+                'answer_id': None,
                 'score': None,
                 'feedback': None,
                 'date': now
@@ -274,6 +275,7 @@ class TestParserFromPost:
                 'submetric_id': 'vision',
                 'group_ids': ['sciensa', 'teamculture'],
                 'question_id': 'vision1',
+                'answer_id': "visionAnswer1e",
                 'score': 2,
                 'feedback': None,
                 'date': now
@@ -283,14 +285,14 @@ class TestParserFromPost:
                 'submetric_id': 'quality',
                 'group_ids': ['sciensa', 'teamculture'],
                 'question_id': 'quality4',
+                'answer_id': "trust_answer4k",
                 'score': 2,
                 'feedback': {
-                    "question": "O que te faz acreditar que a empresa é capaz de alcançar seus objetivos ?",
-                    "answer": "Porque a empresa é demais!",
+                    "text": "Porque a empresa é demais!",
                     "is_annonymous": False
                 },
                 'date': now
-            },
+            }
         ]
 
         scores = survey2scores(survey, groups, now)
