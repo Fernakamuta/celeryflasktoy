@@ -5,17 +5,21 @@ from .sampler import Sampler
 
 
 def question2score(question, groups, now):
-
-    answered = None
+    score, answer_id, feedback = None, None, None
     if question['answered']:
-        answered = question['answered']['score']
+        score = question['answered']['score']
+        answer_id = question['answered']['answer_id']
+        if 'feedback_answer' in question['answered']:
+            feedback = question['answered']['feedback_answer']
 
     score = {
         'metric_id': question['metric_id'],
         'submetric_id': question['submetric_id'],
         'question_id': question['question_id'],
+        'answer_id': answer_id,
         'group_ids': groups,
-        'score': answered,
+        'score': score,
+        'feedback': feedback,
         'date': now,
     }
     return score

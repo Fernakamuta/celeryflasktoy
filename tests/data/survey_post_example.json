@@ -79,60 +79,76 @@
             "answers": [{
                     "answer_id": "trust_answer4a",
                     "score": -2,
-                    "text": "nenhuma"
+                    "text": "nenhuma",
+                    "feedback": "Por que você não acredita que a empresa é capaz de alcançar seus objetivos?"
                 },
                 {
                     "answer_id": "trust_answer4b",
                     "score": -2,
-                    "text": "1"
+                    "text": "1",
+                    "feedback": "Por que você não acredita que a empresa é capaz de alcançar seus objetivos?"
                 },
                 {
                     "answer_id": "trust_answer4c",
                     "score": -2,
-                    "text": "2"
+                    "text": "2",
+                    "feedback": "Por que você não acredita que a empresa é capaz de alcançar seus objetivos?"
                 },
                 {
                     "answer_id": "trust_answer4d",
                     "score": -2,
-                    "text": "3"
+                    "text": "3",
+                    "feedback": "Por que você não acredita que a empresa é capaz de alcançar seus objetivos?"
                 },
                 {
                     "answer_id": "trust_answer4e",
                     "score": -1,
-                    "text": "4"
+                    "text": "4",
+                    "feedback": "Por que você não acredita que a empresa é capaz de alcançar seus objetivos?"
                 },
                 {
                     "answer_id": "trust_answer4f",
                     "score": -1,
-                    "text": "5"
+                    "text": "5",
+                    "feedback": "Por que você não acredita que a empresa é capaz de alcançar seus objetivos?"
                 },
                 {
                     "answer_id": "trust_answer4g",
                     "score": -1,
-                    "text": "6"
+                    "text": "6",
+                    "feedback": "Por que você não acredita que a empresa é capaz de alcançar seus objetivos?"
                 },
                 {
                     "answer_id": "trust_answer4h",
                     "score": 0,
-                    "text": "7"
+                    "text": "7",
+                    "feedback": "Por que você não acredita que a empresa é capaz de alcançar seus objetivos?"
                 },
                 {
                     "answer_id": "trust_answer4i",
                     "score": 1,
-                    "text": "8"
+                    "text": "8",
+                    "feedback": "O que te faz acreditar que a empresa é capaz de alcançar seus objetivos ?"
                 },
                 {
                     "answer_id": "trust_answer4j",
                     "score": 2,
-                    "text": "9"
+                    "text": "9",
+                    "feedback": "O que te faz acreditar que a empresa é capaz de alcançar seus objetivos ?"
                 },
                 {
                     "answer_id": "trust_answer4k",
                     "score": 2,
-                    "text": "Extremamente Satisfeito"
+                    "text": "Extremamente Satisfeito",
+                    "feedback": "O que te faz acreditar que a empresa é capaz de alcançar seus objetivos ?"
                 }
             ],
             "answered": {
+                "feedback_answer": {
+                    "text": "Porque a empresa é demais!",
+                    "is_annonymous": false
+                },
+                "feedback": "O que te faz acreditar que a empresa é capaz de alcançar seus objetivos ?",
                 "answer_id": "trust_answer4k",
                 "score": 2,
                 "text": "Extremamente Satisfeito"
