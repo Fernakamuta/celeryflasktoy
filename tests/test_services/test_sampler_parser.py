@@ -5,19 +5,20 @@ from pathlib import Path
 import pytest
 
 
-from app.services.sampler.parser import (
+from app.survey.sampler.parser import (
     _question_dts_from_scores,
     _question_dts_from_metrics,
     _merge_question_dts,
     _create_question,
     survey_from_tuples,
 )
-from app.services import survey2scores
+from app.survey import survey2scores
 
 
 @pytest.fixture
 def metrics():
-    path = Path(__file__).parent.joinpath('data')
+    path = Path(__file__).parents[1].joinpath('data')
+    print(path)
     with path.joinpath('metrics_example.json').open() as file:
         metrics_ = json.load(file)
     return metrics_
@@ -25,7 +26,7 @@ def metrics():
 
 @pytest.fixture
 def survey():
-    path = Path(__file__).parent.joinpath('data', 'survey_post_example.json')
+    path = Path(__file__).parents[1].joinpath('data', 'survey_post_example.json')
     with path.open() as file:
         survey_ = json.load(file)
     return survey_['survey']
@@ -257,8 +258,9 @@ class TestParser:
 
 class TestParserFromPost:
     def test_survey2scores(self, survey):
+        email = 'test@test.com'
         now = dt.datetime.now()
-        groups = ['sciensa', 'teamculture']
+        group_ids = ['sciensa', 'teamculture']
         scores_expected = [
             {
                 'metric_id': 'ambassadorship',
@@ -268,7 +270,8 @@ class TestParserFromPost:
                 'answer_id': None,
                 'score': None,
                 'feedback': None,
-                'date': now
+                'date': now,
+                'email': email,
             },
             {
                 'metric_id': 'alignment',
@@ -278,7 +281,8 @@ class TestParserFromPost:
                 'answer_id': "visionAnswer1e",
                 'score': 2,
                 'feedback': None,
-                'date': now
+                'date': now,
+                'email': email,
             },
             {
                 'metric_id': 'feedback',
@@ -291,10 +295,11 @@ class TestParserFromPost:
                     "text": "Porque a empresa é demais!",
                     "is_annonymous": False
                 },
-                'date': now
+                'date': now,
+                'email': email,
             }
         ]
 
-        scores = survey2scores(survey, groups, now)
+        scores = survey2scores(survey, email, group_ids, now)
 
         assert scores == scores_expected

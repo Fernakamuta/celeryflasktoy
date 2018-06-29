@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from flask import Flask
-from .survey import bp_survey
+from .views import bp_survey
 
 
 def config_path(mode):

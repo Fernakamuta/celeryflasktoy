@@ -33,17 +33,14 @@ class QuestionSchema(Schema):
         }, allow_none=True)
     }, allow_none=True, required=True)
 
-
     @staticmethod
     def _has_duplicated(answers):
         unique_answers = set([tuple(answer.items()) for answer in answers])
         return len(answers) != len(unique_answers)
 
-
     @staticmethod
     def _get_answers(question):
         return question['answered'], question['answers']
-
 
     @staticmethod
     def _has_feedback(answers):
@@ -52,7 +49,6 @@ class QuestionSchema(Schema):
                 return False
         return True
 
-
     def _is_subset(self, answered, answers):
         answered = deepcopy(answered)
 
@@ -60,14 +56,12 @@ class QuestionSchema(Schema):
             del answered['feedback_answer']
 
         return answered in answers
-            
 
     @validates('answers')
     def validate_answers(self, answers):
          has_duplicated = self._has_duplicated(answers)
          if has_duplicated:
              raise ValidationError('Invalid answers array.')
-
 
     @validates_schema(skip_on_field_errors=True)
     def validate_answered(self, question):
@@ -79,14 +73,13 @@ class QuestionSchema(Schema):
 
         has_feedback = self._has_feedback(answers)
         if has_feedback:
-
-        # Validate answered feedback fields
             if not set(answered) >= {'feedback', 'feedback_answer'}:
                 raise ValidationError('Missing feedback or feedback_answer.')
-            
-            if not answered['feedback_answer'] == None and not set(answered['feedback_answer']) >= {'text', 'is_annonymous'}:
-                raise ValidationError('Missing fields text or is_annonnymous at feedback_answer.')
 
+            cond1 = not answered['feedback_answer'] is None
+            cond2 = not set(answered['feedback_answer']) >= {'text', 'is_annonymous'}
+            if cond1 and cond2:
+                raise ValidationError('Missing fields text or is_annonnymous at feedback_answer.')
 
         is_answered_subset = self._is_subset(answered, answers)
         if not is_answered_subset:
@@ -106,7 +99,7 @@ def get_language(country_language):
 
 
 def get_groups(groups):
-    return groups.split(',')
+    return groups.replace(' ', '').split(',')
 
 
 headers_schema = {
@@ -114,4 +107,8 @@ headers_schema = {
     'tenant': Str(required=True, load_from='Tenant', location='headers'),
     'groups': Function(required=True, deserialize=get_groups, load_from='Groups', location='headers'),
     'language': Function(deserialize=get_language, missing='pt-br', load_from='Accept-Language', location='headers'),
+}
+
+headers_report = {
+    'tenant': Str(required=True, load_from='Tenant', location='headers'),
 }

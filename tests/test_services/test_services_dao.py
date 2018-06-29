@@ -7,7 +7,7 @@ import pytest
 import mongomock
 
 
-from app.services.dao import parse_i18n, DataAccessObject
+from app.survey.dao import parse_i18n, DataAccessObject
 
 
 @pytest.fixture
@@ -17,7 +17,7 @@ def dbname():
 
 @pytest.fixture
 def dao(dbname):
-    path = Path(__file__).parent.joinpath('data', 'metrics_example.json')
+    path = Path(__file__).parents[1].joinpath('data', 'metrics_example.json')
     with path.open() as file:
         metrics = json.load(file)
 
@@ -61,7 +61,7 @@ class TestDao:
 
         record = parse_i18n(record_in, lang_in)
 
-        assert record == record_expected
+        assert record_expected ==  record
 
     def test_find_metrics(self, dao, dbname):
 
@@ -69,60 +69,56 @@ class TestDao:
 
         assert len(records) == 2
 
-    def test_find_historic(self, dao, dbname):
+    def test_find_scores(self, dao, dbname):
         email_in = 'test@test.com'
-        historic_in = {
-            'email': email_in,
-            'scores': [
-                {
-                    'metric_id': 'm1',
-                    'submetric_id': 'sm1',
-                    'question_id': 'q1',
-                    'score': -2,
-                    'date': dt.datetime(2017, 1, 1)
-                },
-                {
-                    'metric_id': 'm2',
-                    'submetric_id': 'sm2',
-                    'question_id': 'q2',
-                    'score': 2,
-                    'date': dt.datetime(2017, 1, 1)
-                },
-            ]
-        }
-        dao.client[dbname].historics.insert_one(deepcopy(historic_in))
-
-        record = dao.find_historic(dbname, email_in)
-
-        assert record == historic_in
-
-    def test_update_historic(self, dao, dbname):
-        email_in = 'test@test.com'
-        scores = [
+        scores_in = [
             {
                 'metric_id': 'm1',
                 'submetric_id': 'sm1',
                 'question_id': 'q1',
                 'score': -2,
-                'date': dt.datetime(2017, 1, 1)
+                'date': dt.datetime(2017, 1, 1),
+                'email': email_in,
             },
             {
                 'metric_id': 'm2',
                 'submetric_id': 'sm2',
                 'question_id': 'q2',
                 'score': 2,
-                'date': dt.datetime(2017, 1, 1)
+                'date': dt.datetime(2017, 1, 1),
+                'email': email_in,
+            },
+        ]
+        dao.client[dbname].historics.insert_many(deepcopy(scores_in))
+
+        records = dao.find_scores(dbname, email_in)
+
+        assert records == scores_in
+
+    def test_insert_scores(self, dao, dbname):
+        email_in = 'test@test.com'
+        scores_in = [
+            {
+                'metric_id': 'm1',
+                'submetric_id': 'sm1',
+                'question_id': 'q1',
+                'score': -2,
+                'date': dt.datetime(2017, 1, 1),
+                'email': email_in,
+            },
+            {
+                'metric_id': 'm2',
+                'submetric_id': 'sm2',
+                'question_id': 'q2',
+                'score': 2,
+                'date': dt.datetime(2017, 1, 1),
+                'email': email_in,
             },
         ]
 
-        record_expected = {
-            'email': email_in,
-            'scores': scores
-        }
+        dao.insert_scores(dbname, deepcopy(scores_in))
 
-        dao.update_historic(dbname, email_in, scores)
+        cursor = dao.client[dbname].historics.find({'email': email_in}, {'_id': False})
+        scores = list(cursor)
 
-        record = dao.client[dbname].historics.find_one({'email': email_in}, {'_id': False})
-
-        assert record == record_expected
-        
+        assert scores == scores_in

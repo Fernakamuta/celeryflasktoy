@@ -43,7 +43,7 @@ def latest_question_dts(metrics, scores):
     return _merge_question_dts(question_dts_all, question_dts_done)
 
 
-def _create_question(m_id, s_id, question, has_feedback=True):
+def _create_question(m_id, s_id, question):
     question_new = {
         **question,
         'metric_id': m_id,
