@@ -59,9 +59,9 @@ class QuestionSchema(Schema):
 
     @validates('answers')
     def validate_answers(self, answers):
-         has_duplicated = self._has_duplicated(answers)
-         if has_duplicated:
-             raise ValidationError('Invalid answers array.')
+        has_duplicated = self._has_duplicated(answers)
+        if has_duplicated:
+            raise ValidationError('Invalid answers array.')
 
     @validates_schema(skip_on_field_errors=True)
     def validate_answered(self, question):
@@ -76,14 +76,14 @@ class QuestionSchema(Schema):
             if not set(answered) >= {'feedback', 'feedback_answer'}:
                 raise ValidationError('Missing feedback or feedback_answer.')
 
-            cond1 = not answered['feedback_answer'] is None
-            cond2 = not set(answered['feedback_answer']) >= {'text', 'is_annonymous'}
-            if cond1 and cond2:
-                raise ValidationError('Missing fields text or is_annonnymous at feedback_answer.')
+            if not answered['feedback_answer'] is None:
+                incomplete_feedback = not set(answered['feedback_answer']) >= {'text', 'is_annonymous'}
+                if incomplete_feedback:
+                    raise ValidationError('Missing fields text or is_annonnymous at feedback_answer.')
 
         is_answered_subset = self._is_subset(answered, answers)
         if not is_answered_subset:
-            raise ValidationError('Invalid answered.') 
+            raise ValidationError('Invalid answered.')
 
 
 class SurveySchema(Schema):
