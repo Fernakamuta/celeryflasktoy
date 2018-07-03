@@ -1,10 +1,10 @@
 import datetime as dt
 
-from app.report.stats import get_report
+from app.report.stats import generate_report
 
 
 class TestStats:
-    def test_get_report(self):
+    def test_generate_report(self):
         now = dt.datetime.now()
         metric_ids = ['m1', 'm2']
         group_id = 'g1'
@@ -37,7 +37,7 @@ class TestStats:
             'score': 0,
         }
 
-        record = get_report(group_id, metric_ids, scsores_in)
+        record = generate_report(group_id, metric_ids, scsores_in)
         assert 'date' in record
         del record['date']
         assert record_expected == record

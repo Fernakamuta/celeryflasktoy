@@ -89,7 +89,7 @@ class TestDao:
                 'email': email_in,
             },
         ]
-        dao.client[dbname].historics.insert_many(deepcopy(scores_in))
+        dao.client[dbname].answers.insert_many(deepcopy(scores_in))
 
         records = dao.find_scores(dbname, email_in)
 
@@ -118,7 +118,7 @@ class TestDao:
 
         dao.insert_scores(dbname, deepcopy(scores_in))
 
-        cursor = dao.client[dbname].historics.find({'email': email_in}, {'_id': False})
+        cursor = dao.client[dbname].answers.find({'email': email_in}, {'_id': False})
         scores = list(cursor)
 
         assert scores == scores_in

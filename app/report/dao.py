@@ -1,3 +1,4 @@
+import pymongo
 
 
 class DataAccessObject:
@@ -22,16 +23,16 @@ class DataAccessObject:
         proj = {
             '_id': False
         }
-        cursor = self.client[dbname].historics.find(query, proj)
+        cursor = self.client[dbname].answers.find(query, proj)
         return list(cursor)
 
-    def find_report(self, dbname, group_id, date):
+    def find_report(self, dbname, group_id):
         query = {
             'group_id': group_id,
-            'date': date,
         }
         proj = {
             '_id': False,
-            'date': False,
         }
-        return self.client[dbname].reports.find_one(query, proj)
+        reports = self.client[dbname].reports.find(query, proj).sort('date', pymongo.DESCENDING).limit(1)
+        for report in reports:
+            return report

@@ -1,4 +1,5 @@
 import datetime as dt
+from copy import deepcopy
 
 from app.report.stats.parser import to_report, scores2records
 from app.report.stats.core import compute_scores
@@ -9,7 +10,7 @@ def filtered_scores(scores):
     return [score for score in scores if start_dt < score['date']]
 
 
-def get_report(group_id, metric_ids, scores):
+def generate_report(group_id, metric_ids, scores):
 
     # filter
     scores = filtered_scores(scores)
@@ -22,3 +23,24 @@ def get_report(group_id, metric_ids, scores):
 
     # parse out
     return to_report(group_id, metric_ids, overall, record_m)
+
+
+def _transform_score(score):
+    return (score + 2) * 2.5
+
+
+def _transform_metric(metric):
+    if not metric['score'] == None:
+        metric['score'] = _transform_score(metric['score'])
+    return metric
+
+
+def transform_report(report):
+    report_new = deepcopy(report)
+    report_new = {
+        **report_new,
+        'date': report_new['date'].isoformat(),
+        'metrics': [_transform_metric(metric) for metric in report_new['metrics']],
+        'score': _transform_score(report_new['score'])
+    }
+    return report_new

@@ -33,8 +33,8 @@ class DataAccessObject:
         proj = {
             '_id': False
         }
-        cursor = self.client[dbname].historics.find(query, proj)
+        cursor = self.client[dbname].answers.find(query, proj)
         return list(cursor)
 
     def insert_scores(self, dbname, scores):
-        self.client[dbname].historics.insert_many(scores)
+        self.client[dbname].answers.insert_many(scores)
