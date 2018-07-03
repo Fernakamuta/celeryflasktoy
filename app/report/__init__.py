@@ -11,7 +11,7 @@ class ReportService:
     def init_app(self, mongo):
         self.dao = DataAccessObject(mongo)
 
-    def get(self, dbname, group_id):
+    def get(self, group_id, dbname):
         now = dt.datetime.now()
         report = self.dao.find_report(dbname, group_id)
         if report:
