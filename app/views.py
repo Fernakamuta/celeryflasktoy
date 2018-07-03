@@ -25,7 +25,7 @@ def on_registration(state):
 @api.route('/survey')
 class Survey(Resource):
     @use_kwargs(headers_schema)
-    def get(self, tenant, language, email, groups, **kwargs):
+    def get(self, tenant, language, email, **kwargs):
         return survey_service.get(tenant, language, email)
 
     @use_kwargs(SurveySchema(strict=True))
@@ -41,4 +41,4 @@ class Survey(Resource):
 class Reports(Resource):
     @use_kwargs(headers_report)
     def get(self, group_id, tenant):
-        return report_service.get(tenant, group_id)
+        return report_service.get(group_id, tenant)

@@ -14,8 +14,10 @@ class ReportService:
     def get(self, dbname, group_id):
         now = dt.datetime.now()
         report = self.dao.find_report(dbname, group_id)
-        report = transform_report(report)
-        return {'report': report}
+        if report:
+            report = transform_report(report)
+            return {'report': report}
+        return {'message': 'group not found'}, 404
 
     def post(self, dbname, group_id):
         metric_ids = self.dao.find_metric_ids(dbname)
