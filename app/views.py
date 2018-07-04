@@ -1,8 +1,9 @@
+import atexit
+
 from flask import Blueprint
 from flask_restplus import Api, Resource
 from webargs.flaskparser import use_kwargs
 from pymongo import MongoClient
-
 
 from .survey import SurveyService
 from .report import ReportService
@@ -15,11 +16,18 @@ survey_service = SurveyService()
 report_service = ReportService()
 
 
+def close_mongo(mongo):
+    mongo.close()
+    print('MongoDB disconnected.')
+
+
 @bp_survey.record_once
 def on_registration(state):
     mongo = MongoClient(state.app.config['MONGO_URL'])
     survey_service.init_app(mongo)
     report_service.init_app(mongo)
+    print(f' * MongoDB is Connected on {mongo.HOST}:{mongo.PORT}')
+    atexit.register(close_mongo, mongo)
 
 
 @api.route('/survey')
