@@ -103,7 +103,7 @@ def get_groups(groups):
     return groups.replace(' ', '').split(',')
 
 
-headers_schema = {
+headers_survey = {
     'email': Str(required=True, load_from='Email', location='headers'),
     'tenant': Str(required=True, load_from='Tenant', location='headers'),
     'groups': Function(required=True, deserialize=get_groups, load_from='Groups', location='headers'),
