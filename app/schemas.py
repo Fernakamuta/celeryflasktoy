@@ -12,6 +12,7 @@ from copy import deepcopy
 
 class QuestionSchema(Schema):
     metric_id = Str(required=True)
+    metric_label = Str(required=True)
     submetric_id = Str(required=True)
     question_id = Str(required=True)
     text = Str(required=True)

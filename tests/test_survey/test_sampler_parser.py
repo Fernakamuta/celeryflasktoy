@@ -115,6 +115,7 @@ class TestParser:
 
     def test_create_question(self):
         m_id = 'm1'
+        m_label = 'm1 label'
         s_id = 's1'
 
         question_input = {
@@ -139,6 +140,7 @@ class TestParser:
 
         question_expected = {
             'metric_id': 'm1',
+            'metric_label': 'm1 label',
             'submetric_id': 's1',
             'question_id': 'm1s1q1',
             'text': 'text-m1s1q1',
@@ -159,7 +161,7 @@ class TestParser:
             ]
         }
 
-        question = _create_question(m_id, s_id, question_input)
+        question = _create_question(m_id, m_label, s_id, question_input)
 
         assert question == question_expected
 
@@ -211,6 +213,7 @@ class TestParser:
         survey_expected = [
             {
                 'metric_id': 'm1',
+                'metric_label': 'labelA', 
                 'submetric_id': 'm1s1',
                 'question_id': 'm1s1q1',
                 'answers': [
@@ -230,6 +233,7 @@ class TestParser:
             },
             {
                 'metric_id': 'm2',
+                'metric_label': 'labelA', 
                 'submetric_id': 'm2s1',
                 'question_id': 'm2s1q2',
                 'answers': [

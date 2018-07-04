@@ -43,10 +43,11 @@ def latest_question_dts(metrics, scores):
     return _merge_question_dts(question_dts_all, question_dts_done)
 
 
-def _create_question(m_id, s_id, question):
+def _create_question(m_id, m_label, s_id, question):
     question_new = {
         **question,
         'metric_id': m_id,
+        'metric_label': m_label,
         'submetric_id': s_id,
         'question_id': question['question_id'],
     }
@@ -81,7 +82,7 @@ def _create_question_fb(question, idx, len):
 
 def survey_from_tuples(metrics, tuples):
     questions = [
-        _create_question(metric['metric_id'], submetric['submetric_id'], question)
+        _create_question(metric['metric_id'], metric['label'], submetric['submetric_id'], question)
         for metric in metrics
         for submetric in metric['submetrics']
         for question in submetric['questions']
