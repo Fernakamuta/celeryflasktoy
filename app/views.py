@@ -7,7 +7,7 @@ from pymongo import MongoClient
 
 from .survey import SurveyService
 from .report import ReportService
-from .schemas import SurveySchema, headers_schema, headers_report
+from .schemas import SurveySchema, headers_survey, headers_report
 
 
 bp_survey = Blueprint('survey', __name__)
@@ -32,12 +32,12 @@ def on_registration(state):
 
 @api.route('/survey')
 class Survey(Resource):
-    @use_kwargs(headers_schema)
+    @use_kwargs(headers_survey)
     def get(self, tenant, language, email, **kwargs):
         return survey_service.get(tenant, language, email)
 
     @use_kwargs(SurveySchema(strict=True))
-    @use_kwargs(headers_schema)
+    @use_kwargs(headers_survey)
     def post(self, tenant, email, survey, groups, **kwargs):
         payload = survey_service.post(tenant, email, survey, groups)
         for group_id in groups:
