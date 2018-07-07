@@ -7,7 +7,7 @@ from pymongo import MongoClient
 
 from .survey import SurveyService
 from .report import ReportService
-from .workers import FooTask
+from .celery import MyTask
 from .schemas import SurveySchema, headers_survey, headers_report
 
 
@@ -15,7 +15,7 @@ bp_survey = Blueprint('survey', __name__)
 api = Api(bp_survey)
 survey_service = SurveyService()
 report_service = ReportService()
-foo_task = FooTask()
+
 
 def close_mongo(mongo):
     mongo.close()
@@ -27,7 +27,6 @@ def on_registration(state):
     mongo = MongoClient(state.app.config['MONGO_URL'])
     survey_service.init_app(mongo)
     report_service.init_app(mongo)
-    foo_task.init_app(mongo)
     print(f' * MongoDB is Connected on {mongo.HOST}:{mongo.PORT}')
     atexit.register(close_mongo, mongo)
 
@@ -42,8 +41,9 @@ class Survey(Resource):
     @use_kwargs(headers_survey)
     def post(self, tenant, email, survey, groups, **kwargs):
         payload = survey_service.post(tenant, email, survey, groups)
-        for group_id in groups:
-            report_service(tenant, group_id)
+        # for group_id in groups:
+            # report_service(tenant, group_id)
+        MyTask().delay({'message': 'Hello Celery'})
         return payload
 
 
